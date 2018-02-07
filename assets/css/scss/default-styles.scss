@@ -1,0 +1,485 @@
+// VARIABLES
+////////////////
+
+$cBlack: rgb(0, 0, 0);
+$cWhite: rgb(255, 255, 255);
+$cWhiteOpacity: rgba(255, 255, 255, .4);
+$cRed: rgb(239, 45, 86);
+$cRedHover: rgb(253, 35, 72);
+
+$cBorder: rgb(221, 221, 221);
+$cBackground: rgb(25, 27, 29);
+$cBackground_grey: rgb(249, 249, 249);
+// GENERAL
+////////////////
+
+html, body {
+  width: 100%;
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Lora', serif;
+
+  position: relative;
+}
+
+// TITLES
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+
+  position: relative;
+
+  padding: 10px 0;
+  font-weight: bold;
+  letter-spacing: 2px;
+  &:after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    background: $cRed;
+
+    width: 100px;
+    height: 1px;
+  }
+}
+
+// LINKS
+a {
+
+  &, &.visited {
+
+  }
+
+  &.hover {
+
+  }
+
+  &.active, &.focus {
+
+  }
+}
+
+// BUTTONS
+
+.btn {
+
+  &.hover {
+
+  }
+
+  &.active {
+
+  }
+}
+
+.btn-primary {
+  height: 50px;
+  line-height: 50px;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  background: $cRed;
+
+  border: 1px solid $cRed;
+  border-radius: 0;
+
+  padding: 0 25px;
+
+  &:hover {
+    background: $cRedHover;
+    border-color: $cRedHover;
+  }
+
+}
+
+.btn-secondary{
+  height: 50px;
+  line-height: 50px;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  background:none;
+
+  border: 1px solid $cWhite;
+  border-radius: 0;
+
+  padding: 0 25px;
+
+  &:hover {
+    background: $cWhite;
+    border-color: $cWhite;
+    color: $cBlack!important ;
+  }
+
+}
+
+// NAV-TABS
+.nav-tabs {
+  border-bottom: 1px solid $cBorder;
+
+  margin-bottom: 25px;
+  .nav-link {
+    color: $cBlack;
+    border: none;
+
+    letter-spacing: 1px;
+
+    &.active {
+      color: $cRed;
+
+      background: none;
+      border-bottom: 1px solid $cRed;
+    }
+  }
+}
+
+.tab-content {
+
+}
+
+// LOADER
+////////////////
+
+#loader {
+
+  height: 100%;
+  width: 100%;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  background: #000;
+
+  z-index: 9999;
+
+  &.loader_fade {
+
+    opacity: 0;
+    z-index: -99;
+
+    transition: .5s;
+  }
+
+  .loader_circle {
+    width: 100px;
+    height: 100px;
+
+    position: absolute;
+    left: calc(50% - 50px);
+    top: calc(50% - 50px);
+
+    border-radius: 50%;
+
+    border: 2px solid $cWhite;
+
+    &.active {
+      border-top: 2px solid $cRed;
+
+      animation: round 2s linear infinite;
+    }
+  }
+
+  .loader_description {
+    width: 100%;
+
+    position: absolute;
+    top: calc(50% + 75px);
+
+    color: $cWhite;
+    letter-spacing: 2px;
+    font-size: 1.5em;
+
+    text-align: center;
+  }
+
+}
+
+@keyframes round {
+  from {
+    transform: rotate(0deg)
+  }
+  to {
+    transform: rotate(360deg)
+  }
+}
+
+// NAVIGATION
+////////////////
+#navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 999;
+
+  .navbar-nav {
+    li {
+      margin-left:25px;
+    }
+    li:last-child {
+      border: 1px solid $cRed;
+
+    }
+  }
+  &.active {
+    background: $cWhite;
+
+    a {
+      color: $cBlack;
+    }
+
+    .navbar-nav {
+
+    }
+  }
+
+}
+
+// HEADER
+////////////////
+
+#page-header {
+
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  color: $cWhite;
+
+  .page-description {
+    width: 100%;
+    letter-spacing: 2px;
+
+    font-size: 1.2em;
+
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+
+    &:after {
+      content: "";
+
+      width: 1px;
+      height: 20px;
+
+      background: $cRed;
+
+      position: absolute;
+      left: 50%;
+      top: calc(100% + 5px);
+    }
+  }
+
+  .page-title {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 5em;
+
+    &:after {
+      display: none;
+    }
+  }
+
+  .controls {
+    padding-bottom: 100px;
+
+    .btn {
+      margin:20px 5px;
+    }
+  }
+
+
+  .background {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    z-index: -1;
+
+    img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+      filter: grayscale(100%);
+    }
+    &:after {
+      content: "";
+
+      width: 100%;
+      height: 100%;
+
+      background: rgba(0, 0, 0, .6);
+
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  // VIDEO
+  ////////////////
+
+}
+
+// MAIN
+////////////////
+
+#page-content {
+
+  width: 100%;
+
+  // THUMBNAILS
+  ////////////////
+
+  #about {
+    background: $cBackground_grey;
+  }
+
+  // THUMBNAILS
+  ////////////////
+
+  #thumbnails {
+
+    width: 100%;
+    height: 100px;
+  }
+
+  // COMPETENCES
+  ////////////////
+
+  #competences {
+    width: 100%;
+
+    padding: 100px 0;
+
+    color: $cWhite;
+    background: $cBackground;
+
+    .canvas-box {
+      position: relative;
+
+      canvas {
+        width: 100%;
+        height: 100px;
+      }
+
+      .canvas-percentage {
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        text-align: center;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    .canvas-title {
+      margin-top: 25px;
+      text-align: center;
+    }
+
+  }
+
+  // CURSUS
+  ////////////////
+
+  #cursus {
+
+    .carousel-indicators li {
+      background: $cBorder;
+
+      cursor: pointer;
+      &.active {
+        background: $cRed;
+      }
+    }
+  }
+
+  // QUESTION
+  ////////////////
+
+  #question {
+    padding: 100px 0;
+  }
+
+  // CONTACT
+  ////////////////
+
+  #contact {
+
+    .contact-form {
+
+    }
+  }
+
+  // GOOGLE MAP
+  ////////////////
+
+  #googleMap {
+    width: 100%;
+    height: 300px;
+  }
+
+}
+
+// FOOTER
+////////////////
+
+#page-footer {
+  width: 100%;
+
+  background: $cBackground;
+  color: $cWhite;
+
+  .copyrights {
+    height: 50px;
+    line-height: 50px;
+
+    margin: 0;
+    padding: 0;
+
+  }
+}
+
+////////////////////////////////////////////////////////////////
+// MEDIA QUERIES
+////////////////////////////////////////////////////////////////
+
+// SMARTPHONE
+@media all and (max-width: 768px) {
+
+}
+
+// TABLETTE
+
+@media all and (max-width: 992px) {
+
+}
+
+
