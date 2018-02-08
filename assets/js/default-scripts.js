@@ -1,3 +1,338 @@
+// VARIABLES
+
+const CONFIG_DIRECTORY = "./config/";
+const PORTFOLIO_DIRECTORY = "./assets/img/";
+const EMPTY_IMAGE = "soon.png";
+
+var configuration = {};
+
+// CONFIGURATION FILE READER
+///////////////////////////////////
+
+function reader_file(_filename) {
+
+
+    $.ajax({
+        type: 'GET',
+        url: CONFIG_DIRECTORY + _filename + '.json',
+        async: true,
+        dataType: 'json',
+        beforeSend: function () {
+
+        },
+        success: function (_jsonDatas) {
+
+            configuration = _jsonDatas;
+
+            $("body").trigger('config_loaded');
+        },
+
+        error: function (resultat, statut, erreur) {
+
+            $("body").trigger('config_error');
+        }
+
+    });
+
+}
+
+
+// MAIN
+////////////
+
+// Reading configuration file
+reader_file("config");
+
+
+$("body").on('config_loaded', function () {
+
+    // Initialize about tabs
+    initializeAbout();
+
+    // Initialize cursus items
+    initializeCursus();
+
+    // Initialize portfolio items
+    initializePortfolio();
+
+    // Initialize portfolio items modals
+    initializePortfolioModals();
+
+});
+
+
+/**
+ *
+ */
+function initializeAbout() {
+
+    // Init
+    var about_tabs = configuration.about,
+        active = "",
+        str_link = "",
+        str_content = "";
+
+
+    // For each developper item
+    for (var i = 0; i < about_tabs.length; i++) {
+
+        (i === 0) ? active = ' active' : active = "";
+
+        str_link +=
+            '<a class="nav-item' + active + '" id="' + about_tabs[i].id + '-tab" data-toggle="tab" href="#' + about_tabs[i].id + '" role="tab" aria-controls="' + about_tabs[i].id + '" aria-selected="true">' + about_tabs[i].title + '</a>';
+
+        str_content +=
+
+            '<div class="tab-pane fade show'+ active +'" id="' + about_tabs[i].id + '" role="tabpanel" aria-labelledby="' + about_tabs[i].id + '-tab">' +
+            '   <p class="tab-introduction">' +about_tabs[i].introduction+ '</p>';
+
+        for (var j = 0; j < about_tabs[i].paragraphs.length; j++) {
+
+            str_content +=
+                '<p>' +  about_tabs[i].paragraphs[j] + '</p>';
+
+        }
+        str_content += '</div>';
+
+    }
+
+
+    $('#nav-tab').append(str_link);
+    $('#nav-tabContent').append(str_content);
+
+
+
+
+}
+
+/**
+ *
+ */
+function initializeCursus() {
+
+    // Init
+    var cursus_items = configuration.cursus;
+
+
+    // For each developper item
+    for (var i = 0; i < cursus_items.length; i++) {
+
+        var str = "";
+
+        for (var j = 0; j < cursus_items[i].content.length; j++) {
+
+            str +=
+
+                '<div class="cursus-item">' +
+                '   <div class="row">' +
+
+                '       <div class="col-md-6 cursus-item__header">' +
+                '           <h2 class="cursus-title">' + cursus_items[i].content[j].title + '</h2>' +
+                '           <p class="cursus-date">' + cursus_items[i].content[j].date + '</p>' +
+                '       </div>' +
+
+                '       <div class="col-md-6 cursus-item__content">' +
+                '           <p class="cursus-status">' + cursus_items[i].content[j].status + '</p>' +
+                '           <p class="cursus-description">' + cursus_items[i].content[j].description + '</p>' +
+                '       </div>' +
+
+                '   </div>' +
+
+                '</div>';
+        }
+
+        $('#' + cursus_items[i].id).append(str);
+    }
+
+
+}
+
+/**
+ * Initialize the portfolio items
+ */
+function initializePortfolio() {
+
+    // Init
+    var str = "",
+        portfolio_items = configuration.portfolio;
+
+
+    // For each portfolio_item
+    for (var i = 0; i < portfolio_items.length; i++) {
+
+        str +=
+            '<div class="col-md-4 project-item">' +
+
+            '   <figure>';
+
+        if (portfolio_items[i].img.length < 1) {
+            str += '<img src="' + PORTFOLIO_DIRECTORY + EMPTY_IMAGE + '" alt="Article en cours de développement">';
+        } else {
+            str += '<img src="' + PORTFOLIO_DIRECTORY + portfolio_items[i].img[0] + '" alt="Screenshot du projet ' + portfolio_items[i].title + '">';
+        }
+
+        str +=
+            '   </figure>' +
+
+            '   <div class="modal-hover">' +
+            '       <button class="modal-link" data-toggle="modal" data-target="#' + portfolio_items[i].id + '">' +
+            '           <i class="fa fa-search"></i>' +
+            '       </button>' +
+
+            '       <p class="modal-description">' + portfolio_items[i].title + '</p>' +
+            '   </div>' +
+
+            '</div>';
+    }
+
+    $('#portfolio_items').append(str);
+}
+
+/**
+ * Initialize the portfolio modals
+ */
+function initializePortfolioModals() {
+
+    // Init
+    var str = "",
+        portfolio_items = configuration.portfolio;
+
+
+    // For each portfolio_item
+    for (var i = 0; i < portfolio_items.length; i++) {
+
+        str +=
+            '<div class="modal fade" id="' + portfolio_items[i].id + '" tabindex="-1" role="dialog"  aria-hidden="true"> ' +
+            '   <div class="modal-dialog" role="document"> ' +
+            '       <div class="modal-content"> ' +
+
+            // MODAL HEADER
+            '           <header class="modal-header"> ' +
+            '               <h5 class="modal-title">' + portfolio_items[i].title + '</h5> ' +
+            '               <button type="button" class="close" data-dismiss="modal" aria-label="Close"> ' +
+            '                   <span aria-hidden="true">&times;</span> ' +
+            '               </button> ' +
+            '           </header> ' +
+
+            // MODAL BODY
+            '           <div class="modal-body"> ' +
+
+            '               <div class="row"> ' +
+            '                   <div class="col-md-8 offset-md-2" id="slider_' + i + '"> ' +
+            '                       <div id="carousel_' + i + '" class="carousel slide"> ' +
+
+            // PORTFOLIO PAGE VIEW
+            '                           <div class="carousel-inner"> ';
+
+        // For each portfolio_item big image
+        for (var j = 0; j < portfolio_items[i].img.length; j++) {
+
+            str +=
+                '<div class="';
+
+            // First item is active
+            if (j === 0) str += 'active ';
+
+
+            str += 'item carousel-item" data-slide-number="' + j + '"> ' +
+                '   <img src="' + PORTFOLIO_DIRECTORY + portfolio_items[i].img[j] + '" class="img-fluid"> ' +
+                '</div> ';
+        }
+
+        str +=
+
+            '                           </div> ' +
+            '                           <ul class="carousel-indicators list-inline"> ';
+
+        // For each portfolio_item thumnail image
+        for (var j = 0; j < portfolio_items[i].img.length; j++) {
+
+            str +=
+                '<li class="list-inline-item';
+
+            // First item is actives
+            if (j === 0) str += ' active';
+
+            // Disable thumnail if only one image
+            if (portfolio_items[i].img.length <= 1) str += ' disable';
+
+            str +=
+                '"> ' +
+                '   <a id="carousel-selector-' + i + j + '" class="selected" data-slide-to="' + j + '" data-target="#carousel_' + i + '"> ' +
+                '       <img src="' + PORTFOLIO_DIRECTORY + portfolio_items[i].img[j] + '" > ' +
+                '   </a> ' +
+                '</li> ';
+        }
+
+
+        str +=
+            '                           </ul> ' +
+            '                       </div> ' +
+            '                   </div> ' +
+            '               </div> ' +
+
+            // Portfolio_item additionnal informations
+            '               <table class="modal-table"> ' +
+
+            '                   <tr> ' +
+            '                       <th>Client:</th> ' +
+            '                       <td>' + portfolio_items[i].client + '</td> ' +
+            '                   </tr> ' +
+
+            '                   <tr> ' +
+            '                       <th>Technologies:</th> ' +
+            '                       <td> ' +
+            '                           <ul> ';
+
+        for (var k = 0; k < portfolio_items[i].technologies.length; k++) {
+
+            str +=
+                '<li>' + portfolio_items[i].technologies[k] + '</li>';
+        }
+
+        str +=
+            '                           </ul> ' +
+            '                       </td> ' +
+            '                   </tr> ' +
+
+            '                   <tr> ' +
+            '                       <th>Description:</th> ' +
+            '                       <td> ' +
+            '                           <p> ' + portfolio_items[i].description + '</p> ' +
+            '                       </td> ' +
+            '                   </tr> ';
+
+        if (portfolio_items[i].link !== "") {
+
+            str +=
+                '                   <tr> ' +
+                '                       <th colspan="2"> ' +
+                '                           <a class="btn btn-primary" href="http://www.thierrymonicault.fr" target="_blank">Voir le projet</a> ' +
+                '                       </th> ' +
+                '                   </tr> ';
+        }
+
+        str +=
+
+            '               </table> ' +
+
+            '           </div> ' +
+
+            // MODAL FOOTER
+            '           <footer class="modal-footer"> ' +
+            '               <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button> ' +
+            '           </footer> ' +
+            '       </div> ' +
+            '   </div> ' +
+            '</div>';
+
+    }
+
+    // Append Modals into current DOM
+    $('body').append(str);
+}
+
+
 $(document).ready(function () {
 
     // Loader
@@ -55,217 +390,6 @@ $(document).ready(function () {
     });
 
 
-    var projects_id =
-        [
-            {
-                'id': 'project_thierrymonicault',
-                'img':
-                    [
-                        './assets/img/thierrymonicault.png'
-                    ]
-            },
-
-            {
-                'id': 'project_blog',
-                'img':
-                    [
-                        './assets/img/soon.jpg'
-                    ]
-            },
-
-            {
-                'id': 'project_via',
-                'img':
-                    [
-                        './assets/img/via.png'
-                    ]
-            },
-
-            {
-                'id': 'project_web_agency',
-                'img':
-                    [
-                        './assets/img/webagency.png'
-                    ]
-            },
-
-            {
-                'id': 'project_wordpress',
-                'img':
-                    [
-                        './assets/img/wordpress/1.png',
-                        './assets/img/wordpress/2.png',
-                        './assets/img/wordpress/3.png',
-                        './assets/img/wordpress/4.png',
-                        './assets/img/wordpress/5.png',
-                        './assets/img/wordpress/6.png',
-                        './assets/img/wordpress/7.png',
-                        './assets/img/wordpress/8.png',
-                        './assets/img/wordpress/9.png',
-                        './assets/img/wordpress/10.png',
-                        './assets/img/wordpress/11.png',
-                        './assets/img/wordpress/12.png',
-                        './assets/img/wordpress/13.png',
-                        './assets/img/wordpress/14.png',
-                        './assets/img/wordpress/15.png',
-                        './assets/img/wordpress/16.png',
-                        './assets/img/wordpress/17.png',
-                        './assets/img/wordpress/18.png',
-                        './assets/img/wordpress/19.png',
-                        './assets/img/wordpress/20.png',
-                        './assets/img/wordpress/21.png',
-                        './assets/img/wordpress/22.png',
-                        './assets/img/wordpress/23.png',
-                        './assets/img/wordpress/24.png',
-                        './assets/img/wordpress/25.png',
-                        './assets/img/wordpress/26.png'
-                    ]
-            },
-
-            {
-                'id': 'project_google_map',
-                'img':
-                    [
-                        './assets/img/velib.png'
-                    ]
-            }
-        ];
-
-
-    var str = '';
-
-
-    for (var i = 0; i < projects_id.length; i++) {
-
-
-        str +=
-            '                    <div class="modal fade" id="' + projects_id[i].id + '" tabindex="-1" role="dialog"  aria-hidden="true"> ' +
-            '                        <div class="modal-dialog" role="document"> ' +
-            '                            <div class="modal-content"> ' +
-            '                                <div class="modal-header"> ' +
-            '                                    <h5 class="modal-title">Site Internet de Mr MONICAULT</h5> ' +
-            '                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"> ' +
-            '                                        <span aria-hidden="true">&times;</span> ' +
-            '                                    </button> ' +
-            '                                </div> ' +
-            '                                <div class="modal-body"> ' +
-
-            '                                    <!-- main slider carousel --> ' +
-            '                                    <div class="row"> ' +
-            '                                        <div class="col-lg-8 offset-lg-2" id="slider_' + i + '"> ' +
-
-            '                                            <div id="carousel_' + i + '" class="carousel slide"> ' +
-            '                                                <!-- main slider carousel items --> ' +
-            '                                                <div class="carousel-inner"> ';
-
-
-        for (var j = 0; j < projects_id[i].img.length; j++) {
-
-
-            str +=
-                '<div class="';
-
-            if ( j == 0 )
-                str += 'active ';
-
-            str += 'item carousel-item" data-slide-number="' + j + '"> ' +
-                '   <img src="' + projects_id[i].img[j] + '" class="img-fluid"> ' +
-                '</div> ';
-        }
-
-        str +=
-
-            '                                                </div> ' +
-            '<ul class="carousel-indicators list-inline"> ';
-
-
-        for (var j = 0; j < projects_id[i].img.length; j++) {
-
-            str += '      <li class="list-inline-item';
-
-            if ( j == 0 )
-                str += ' active';
-
-            if(projects_id[i].img.length <= 1)
-                str +=' disable';
-
-            str +='"> ' +
-                '                                                        <a id="carousel-selector-' + i + j + '" class="selected" data-slide-to="' + j + '" ' +
-                '                                                           data-target="#carousel_' + i + '"> ' +
-                '   <img src="' + projects_id[i].img[j] + '" > ' +
-                '                                                        </a> ' +
-                '                                                    </li> ';
-        }
-
-
-        str +=
-            '                                                </ul> ' +
-            '                                            </div> ' +
-            '                                        </div> ' +
-
-            '                                    </div> ' +
-
-
-            '                                    <table class="modal-table"> ' +
-            '                                        <tr> ' +
-            '                                            <th>Client:</th> ' +
-            '                                            <td>Mr Thierry Monicault</td> ' +
-            '                                        </tr> ' +
-
-            '                                        <tr> ' +
-            '                                            <th>Technologies:</th> ' +
-            '                                            <td> ' +
-            '                                                <ul> ' +
-            '                                                    <li>HTML5/CSS3</li> ' +
-            '                                                    <li>Javascript/jQuery/AJAX</li> ' +
-            '                                                    <li>PHP5</li> ' +
-            '                                                    <li>Symfony 3</li> ' +
-            '                                                    <li>Doctrine/MySQL</li> ' +
-            '                                                </ul> ' +
-            '                                            </td> ' +
-            '                                        </tr> ' +
-
-            '                                        <tr> ' +
-            '                                            <th>Description:</th> ' +
-            '                                            <td> ' +
-            '                                                <p> ' +
-            '                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ' +
-            '                                                    facilisis leo id dictum pellentesque. Maecenas dapibus dui elit, ac ' +
-            '                                                    tempor odio mollis viverra. Aliquam faucibus ipsum sit amet risus ' +
-            '                                                    auctor, eu congue urna lobortis. Cras euismod neque et nibh aliquet, ' +
-            '                                                    quis rhoncus quam auctor. Sed tempor commodo enim, accumsan feugiat ' +
-            '                                                    nunc ' +
-            '                                                    egestas fringilla. Morbi vel fermentum mi. Nullam vulputate justo et ' +
-            '                                                    enim posuere, sodales sodales dui pulvinar. Pellentesque dapibus, ' +
-            '                                                    ante ' +
-            '                                                    non aliquet commodo, mi lectus sodales est, ac tempus libero arcu eu ' +
-            '                                                    diam. Pellentesque placerat purus at luctus commodo. Praesent ' +
-            '                                                    lacinia ' +
-            '                                                    rhoncus orci dapibus mattis. Sed vel vestibulum dui. Sed placerat ' +
-            '                                                    imperdiet lectus, ut convallis sapien congue vitae. ' +
-            '                                                </p> ' +
-            '                                            </td> ' +
-            '                                        </tr> ' +
-            '                                        <tr> ' +
-            '                                            <th colspan="2"> ' +
-            '                                                <a class="btn btn-primary" href="http://www.thierrymonicault.fr" ' +
-            '                                                   target="_blank">Voir le projet</a> ' +
-            '                                            </th> ' +
-            '                                        </tr> ' +
-            '                                    </table> ' +
-
-            '                                </div> ' +
-            '                                <div class="modal-footer"> ' +
-            '                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> ' +
-            '                                </div> ' +
-            '                            </div> ' +
-            '                        </div> ' +
-            '                    </div>';
-
-    }
-
-
-    $('body').append(str);
 });
 
 

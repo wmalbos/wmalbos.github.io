@@ -1,0 +1,173 @@
+{
+
+  "about" : [
+    {
+      "id" : "passion",
+      "title" : "Passioné",
+      "introduction" : "Tombé dans la marmite de technologies étant petit.",
+      "paragraphs" : [
+        "<i class=\"fa fa-quote-left\"></i> La passion du développement m'est venue à l'âge de 12ans. j'ai alors commencé à \"bidouiller\" divers forum en HTML/CSS pour permettre à des groupes de joueurs de communiquer, prévoir des soirée jeu sur internet, etc..",
+        "Depuis, cette passion ne ma jamais quitté et c'est tout naturellement que j'ai effectué une poursuite d'etude universitaire en ingénierie de l'informatique à l'Université d'Orléans puis des des parcours diplômants avec l'école OpenClass Room.",
+        "Sur mon temps libre je continue à découvrir, apprendre, bidouiller, les nouvelles technologies en réalisant diverses applications comme des site internet, jeux, 3D, etc.."
+      ]
+    },
+
+    {
+      "id" : "goals",
+      "title" : "Objectifs",
+      "introduction" : "Le goût du défis.",
+      "paragraphs" : [
+        "<i class=\"fa fa-quote-left\"></i> Je travail toujours dans l'objectif de réaliser un code de la meilleur qualité possible pour répondre au besoin du projet. Il est très stimulant de ce remettre en question pour pouvoir s'adapter et apprendre de la constante évolution des technologies.",
+        "Ainsi, relever de nouveaux défis est un quotidien pour mener à bien les projets rapidement avec un code de qualité."
+      ]
+    },
+
+    {
+      "id" : "game",
+      "title" : "Un jeu ?",
+      "introduction" : "Un projet informatique, c'est un jeu !.",
+      "paragraphs" : [
+        "<i class=\"fa fa-quote-left\"></i> On débute la partie avec un total de 100pts, l'objectif étant de la terminer avec un score positif.",
+        "A chaque développement réalisé on perds des points en fonction de la qualité du développement. Par exemple, plus le code contient d'erreurs, plus on perds de points. Moins on a de points, plus il est difficile de réaliser du code de qualité à cause des erreurs précédente. Il est alors primordiale de toujours penser à développer correctement pour faciliter les développements futurs et améliorer leurs temps de production.",
+        "Bien sûr en théorie, lorsque l'on dépasse le délais de livraison c'est la fin du jeu et lorsque que l'on reprends un projets ultérieurement pour modifications on reprends également le nombre de points de ce dernier.",
+        "On peu voir ceci comme un jeux de stratégie où il est plus aisé de perdre ou de finir avec des petits scores. C'est pour cela qu'il est existant de chercher à s'améliorer pour réaliser le plus haut score possible !"
+      ]
+    }
+  ],
+
+  "cursus": [
+    {
+      "id": "cursus-developer_content",
+      "content": [
+        {
+          "title": "Gilles leroux industrie",
+          "date": "Date du cursus",
+          "status": "CDD",
+          "description": "ma description"
+        },
+        {
+          "title": "Gilles leroux industrie",
+          "date": "Date du cursus",
+          "status": "CDD",
+          "description": "ma description"
+        },
+        {
+          "title": "Gilles leroux industrie",
+          "date": "Date du cursus",
+          "status": "CDD",
+          "description": "ma description"
+        }
+      ]
+    },
+    {
+      "id": "cursus-others_content",
+      "content": [
+        {
+          "title": "Gilles leroux industrie",
+          "date": "Date du cursus",
+          "status": "CDD",
+          "description": "ma description"
+        },
+        {
+          "title": "Gilles leroux industrie",
+          "date": "Date du cursus",
+          "status": "CDD",
+          "description": ""
+        },
+        {
+          "title": "Gilles leroux industrie",
+          "date": "Date du cursus",
+          "status": "CDD",
+          "description": "ma description"
+        }
+      ]
+    }
+  ],
+
+  "portfolio": [
+    {
+      "id": "project_thierrymonicault",
+      "client": "",
+      "title": "",
+      "img": [
+        "thierrymonicault.png",
+        "thierrymonicault.png"
+      ],
+      "technologies": [
+        "HTML5/CSS3",
+        "PHP5"
+      ],
+      "description": "",
+      "link": ""
+    },
+    {
+      "id": "project_thierrymonicault",
+      "client": "",
+      "title": "",
+      "img": [
+      ],
+      "technologies": [
+        "HTML5/CSS3",
+        "PHP5"
+      ],
+      "description": "",
+      "link": ""
+    },
+    {
+      "id": "project_thierrymonicault",
+      "client": "",
+      "title": "",
+      "img": [
+        "thierrymonicault.png"
+      ],
+      "technologies": [
+        "HTML5/CSS3",
+        "PHP5"
+      ],
+      "description": "",
+      "link": ""
+    },
+    {
+      "id": "project_thierrymonicault",
+      "client": "",
+      "title": "",
+      "img": [
+        "thierrymonicault.png"
+      ],
+      "technologies": [
+        "HTML5/CSS3",
+        "PHP5"
+      ],
+      "description": "",
+      "link": ""
+    },
+    {
+      "id": "project_thierrymonicault",
+      "client": "",
+      "title": "",
+      "img": [
+        "thierrymonicault.png"
+      ],
+      "technologies": [
+        "HTML5/CSS3",
+        "PHP5"
+      ],
+      "description": "",
+      "link": ""
+    },
+    {
+      "id": "project_thierrymonicault",
+      "client": "",
+      "title": "",
+      "img": [
+        "thierrymonicault.png"
+      ],
+      "technologies": [
+        "HTML5/CSS3",
+        "PHP5"
+      ],
+      "description": "",
+      "link": ""
+    }
+  ]
+}
