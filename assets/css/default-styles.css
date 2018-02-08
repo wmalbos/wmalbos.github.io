@@ -3,13 +3,13 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'Lora', serif;
   position: relative; }
 
 h1, h2, h3 {
   font-family: 'Montserrat', sans-serif;
   position: relative;
   padding: 10px 0;
+  margin-bottom: 25px;
   font-weight: bold;
   letter-spacing: 2px; }
   h1:after, h2:after, h3:after {
@@ -18,8 +18,29 @@ h1, h2, h3 {
     left: 0;
     bottom: 0;
     background: #ef2d56;
-    width: 100px;
+    width: 50px;
     height: 1px; }
+
+.column {
+  padding: 0 25px; }
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto; }
+  .section-header .section-title {
+    font-size: 50px;
+    padding: 25px 0;
+    margin: 0 0 75px 0;
+    letter-spacing: 5px; }
+    .section-header .section-title.text-center:after {
+      left: calc(50% - 25px); }
+  .section-header .section-icon {
+    margin: 0;
+    padding: 0;
+    font-size: 40px; }
 
 .btn-primary {
   height: 50px;
@@ -54,11 +75,18 @@ h1, h2, h3 {
   .nav-tabs .nav-link {
     color: black;
     border: none;
-    letter-spacing: 1px; }
+    letter-spacing: 3px;
+    font-size: 14px;
+    font-weight: 100;
+    font-family: 'Montserrat', sans-serif; }
     .nav-tabs .nav-link.active {
       color: #ef2d56;
       background: none;
       border-bottom: 1px solid #ef2d56; }
+
+.tab-content .tab-introduction {
+  font-weight: bold;
+  font-size: 16px; }
 
 #loader {
   height: 100%;
@@ -170,13 +198,23 @@ h1, h2, h3 {
 #page-content {
   width: 100%; }
   #page-content #about {
+    padding: 100px 0;
     background: #f9f9f9; }
+    #page-content #about p {
+      color: #6c747d;
+      font-weight: 300;
+      text-align: justify;
+      font-family: 'Lora', serif;
+      line-height: 1.5;
+      font-size: 15px; }
+    #page-content #about .btn {
+      margin-top: 25px; }
   #page-content #thumbnails {
     width: 100%;
     height: 100px; }
   #page-content #competences {
     width: 100%;
-    padding: 100px 0;
+    padding: 100px 0 50px 0;
     color: white;
     background: #191b1d; }
     #page-content #competences .canvas-box {
@@ -190,20 +228,116 @@ h1, h2, h3 {
         position: absolute;
         top: 0;
         left: 0;
+        font-size: 24px;
         text-align: center;
         display: flex;
         align-items: center;
         justify-content: center; }
     #page-content #competences .canvas-title {
-      margin-top: 25px;
-      text-align: center; }
+      text-align: center;
+      font-size: 14px;
+      padding: 25px 0 10px 0;
+      position: relative; }
+      #page-content #competences .canvas-title:after {
+        content: "";
+        width: 40px;
+        height: 1px;
+        position: absolute;
+        bottom: 0;
+        left: calc(50% - 20px);
+        background: #ef2d56; }
+    #page-content #competences .additional-infos,
+    #page-content #competences .revise-infos {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-top: 100px; }
+      #page-content #competences .additional-infos .info-title,
+      #page-content #competences .revise-infos .info-title {
+        color: #ef2d56;
+        margin: 0 25px 0 0;
+        padding: 0;
+        font-size: 16px; }
+        #page-content #competences .additional-infos .info-title:after,
+        #page-content #competences .revise-infos .info-title:after {
+          display: none; }
+      #page-content #competences .additional-infos .language-list,
+      #page-content #competences .revise-infos .language-list {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap; }
+        #page-content #competences .additional-infos .language-list li,
+        #page-content #competences .revise-infos .language-list li {
+          list-style: none;
+          margin-right: 20px;
+          font-size: 16px; }
+    #page-content #competences .revise-infos {
+      margin-top: 0; }
+  #page-content #cursus .carousel {
+    padding: 100px 0; }
   #page-content #cursus .carousel-indicators li {
     background: #dddddd;
     cursor: pointer; }
     #page-content #cursus .carousel-indicators li.active {
       background: #ef2d56; }
+  #page-content #cursus .carousel-inner header {
+    border-bottom: 1px solid #dddddd; }
+  #page-content #cursus .additional-infos .info-description {
+    color: #6c747d;
+    font-style: italic;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 100px 0 0 0; }
+  #page-content #cursus .cursus-item {
+    color: #6c747d; }
+    #page-content #cursus .cursus-item:hover .cursus-item__header:after {
+      background: #ef2d56; }
+    #page-content #cursus .cursus-item .cursus-item__header {
+      padding: 50px;
+      border-right: 1px solid #dddddd;
+      position: relative; }
+      #page-content #cursus .cursus-item .cursus-item__header:after {
+        content: "";
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        border: 2px solid #ef2d56;
+        background: white;
+        position: absolute;
+        top: 50px;
+        right: -6px;
+        transition: .3s; }
+    #page-content #cursus .cursus-item .cursus-item__content {
+      padding: 50px; }
+    #page-content #cursus .cursus-item .cursus-title,
+    #page-content #cursus .cursus-item .cursus-date {
+      font-size: 14px;
+      letter-spacing: 2px;
+      font-weight: 300;
+      margin: 0;
+      padding: 0;
+      text-align: right; }
+    #page-content #cursus .cursus-item .cursus-title {
+      color: #ef2d56; }
+      #page-content #cursus .cursus-item .cursus-title:after {
+        display: none; }
+    #page-content #cursus .cursus-item .cursus-status,
+    #page-content #cursus .cursus-item .cursus-description {
+      font-size: 14px;
+      font-weight: 300;
+      margin: 0;
+      padding-left: 15px; }
+    #page-content #cursus .cursus-item .cursus-status {
+      font-weight: bold;
+      padding-left: 15px; }
   #page-content #question {
-    padding: 100px 0; }
+    padding: 150px 0;
+    margin: 100px 0;
+    background: url("../img/bg.jpg") center; }
   #page-content #googleMap {
     width: 100%;
     height: 300px; }

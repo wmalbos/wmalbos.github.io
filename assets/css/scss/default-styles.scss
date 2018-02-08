@@ -6,6 +6,7 @@ $cWhite: rgb(255, 255, 255);
 $cWhiteOpacity: rgba(255, 255, 255, .4);
 $cRed: rgb(239, 45, 86);
 $cRedHover: rgb(253, 35, 72);
+$cGrey: rgb(108, 116, 125);
 
 $cBorder: rgb(221, 221, 221);
 $cBackground: rgb(25, 27, 29);
@@ -20,8 +21,6 @@ html, body {
   margin: 0;
   padding: 0;
 
-  font-family: 'Lora', serif;
-
   position: relative;
 }
 
@@ -32,6 +31,7 @@ h1, h2, h3 {
   position: relative;
 
   padding: 10px 0;
+  margin-bottom: 25px;
   font-weight: bold;
   letter-spacing: 2px;
   &:after {
@@ -43,9 +43,16 @@ h1, h2, h3 {
 
     background: $cRed;
 
-    width: 100px;
+    width: 50px;
     height: 1px;
   }
+}
+
+// Paragrpah {
+
+// COLUMN
+.column {
+  padding: 0 25px;
 }
 
 // LINKS
@@ -62,6 +69,39 @@ a {
   &.active, &.focus {
 
   }
+}
+
+// SECTION
+.section-header {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  margin: auto;
+
+  .section-title {
+
+    font-size: 50px;
+
+    padding: 25px 0;
+    margin: 0 0 75px 0;
+    letter-spacing: 5px;
+    &.text-center {
+      &:after {
+        left: calc(50% - 25px);
+      }
+    }
+  }
+
+  .section-icon {
+    margin: 0;
+    padding: 0;
+
+    font-size: 40px;
+  }
+
 }
 
 // BUTTONS
@@ -98,14 +138,14 @@ a {
 
 }
 
-.btn-secondary{
+.btn-secondary {
   height: 50px;
   line-height: 50px;
 
   text-transform: uppercase;
   letter-spacing: 1px;
 
-  background:none;
+  background: none;
 
   border: 1px solid $cWhite;
   border-radius: 0;
@@ -115,7 +155,7 @@ a {
   &:hover {
     background: $cWhite;
     border-color: $cWhite;
-    color: $cBlack!important ;
+    color: $cBlack !important;
   }
 
 }
@@ -129,7 +169,11 @@ a {
     color: $cBlack;
     border: none;
 
-    letter-spacing: 1px;
+    letter-spacing: 3px;
+    font-size: 14px;
+    font-weight: 100;
+
+    font-family: 'Montserrat', sans-serif;
 
     &.active {
       color: $cRed;
@@ -141,6 +185,12 @@ a {
 }
 
 .tab-content {
+
+  .tab-introduction {
+    font-weight: bold;
+    font-size: 16px;
+
+  }
 
 }
 
@@ -222,7 +272,7 @@ a {
 
   .navbar-nav {
     li {
-      margin-left:25px;
+      margin-left: 25px;
     }
     li:last-child {
       border: 1px solid $cRed;
@@ -300,10 +350,9 @@ a {
     padding-bottom: 100px;
 
     .btn {
-      margin:20px 5px;
+      margin: 20px 5px;
     }
   }
-
 
   .background {
     width: 100%;
@@ -348,11 +397,26 @@ a {
 
   width: 100%;
 
-  // THUMBNAILS
+  // ABOUT
   ////////////////
 
   #about {
+
+    padding: 100px 0;
     background: $cBackground_grey;
+
+    p {
+      color: $cGrey;
+      font-weight: 300;
+      text-align: justify;
+      font-family: 'Lora', serif;
+      line-height: 1.5;
+      font-size: 15px;
+    }
+
+    .btn {
+      margin-top: 25px;
+    }
   }
 
   // THUMBNAILS
@@ -370,7 +434,7 @@ a {
   #competences {
     width: 100%;
 
-    padding: 100px 0;
+    padding: 100px 0 50px 0;
 
     color: $cWhite;
     background: $cBackground;
@@ -390,6 +454,7 @@ a {
         position: absolute;
         top: 0;
         left: 0;
+        font-size: 24px;
 
         text-align: center;
 
@@ -400,8 +465,64 @@ a {
     }
 
     .canvas-title {
-      margin-top: 25px;
       text-align: center;
+      font-size: 14px;
+      padding: 25px 0 10px 0;
+
+      position: relative;
+      &:after {
+        content: "";
+        width: 40px;
+        height: 1px;
+
+        position: absolute;
+        bottom: 0;
+        left: calc(50% - 20px);
+
+        background: $cRed;
+      }
+    }
+
+    .additional-infos,
+    .revise-infos {
+
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      margin-top: 100px;
+      .info-title {
+        color: $cRed;
+
+        margin: 0 25px 0 0;
+        padding: 0;
+        font-size: 16px;
+
+        &:after {
+          display: none;
+        }
+      }
+
+      .language-list {
+        margin: 0;
+        padding: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+
+        li {
+          list-style: none;
+
+          margin-right: 20px;
+          font-size: 16px;
+        }
+      }
+    }
+
+    .revise-infos {
+      margin-top: 0;
     }
 
   }
@@ -411,6 +532,9 @@ a {
 
   #cursus {
 
+    .carousel {
+      padding: 100px 0;
+    }
     .carousel-indicators li {
       background: $cBorder;
 
@@ -419,13 +543,108 @@ a {
         background: $cRed;
       }
     }
+
+    .carousel-inner {
+
+      header {
+        border-bottom: 1px solid $cBorder;
+      }
+    }
+
+    .additional-infos {
+      .info-description {
+        color: $cGrey;
+        font-style: italic;
+        font-size: 14px;
+        letter-spacing: 1px;
+
+        text-align: center;
+        margin: 100px 0 0 0;
+      }
+    }
+    .cursus-item {
+
+      color: $cGrey;
+
+      &:hover {
+        .cursus-item__header {
+          &:after {
+            background: $cRed;
+          }
+        }
+      }
+      .cursus-item__header {
+        padding: 50px;
+        border-right: 1px solid $cBorder;
+        position: relative;
+
+        &:after {
+          content: "";
+
+          width: 12px;
+          height: 12px;
+
+          border-radius: 50%;
+          border: 2px solid $cRed;
+
+          background: $cWhite;
+          position: absolute;
+          top: 50px;
+          right: -6px;
+
+          transition: .3s;
+        }
+      }
+
+      .cursus-item__content {
+        padding: 50px;
+      }
+
+      .cursus-title,
+      .cursus-date {
+        font-size: 14px;
+        letter-spacing: 2px;
+        font-weight: 300;
+
+        margin: 0;
+        padding: 0;
+
+        text-align: right;
+      }
+      .cursus-title {
+        color: $cRed;
+
+        &:after {
+          display: none;
+        }
+      }
+
+
+
+      .cursus-status,
+      .cursus-description {
+        font-size: 14px;
+        font-weight: 300;
+
+        margin: 0;
+        padding-left: 15px;
+      }
+
+      .cursus-status {
+        font-weight: bold;
+        padding-left: 15px;
+      }
+    }
   }
 
   // QUESTION
   ////////////////
 
   #question {
-    padding: 100px 0;
+    padding: 150px 0;
+    margin: 100px 0;
+
+    background: url('../img/bg.jpg') center;
   }
 
   // CONTACT

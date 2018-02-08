@@ -153,11 +153,11 @@ var deliveredData =
                     data: [85, 15],
                     backgroundColor: [
                         "#3ec556",
-                        "rgba(0,0,0,0)"
+                        "rgb(249, 249, 249)"
                     ],
                     hoverBackgroundColor: [
                         "#3ec556",
-                        "rgba(0,0,0,0)"
+                        "rgb(249, 249, 249)"
                     ],
                     borderWidth: [
                         0, 0
@@ -174,11 +174,11 @@ var deliveredData =
                     data: [60, 40],
                     backgroundColor: [
                         "#3ec556",
-                        "rgba(0,0,0,0)"
+                        "rgb(249, 249, 249)"
                     ],
                     hoverBackgroundColor: [
                         "#3ec556",
-                        "rgba(0,0,0,0)"
+                        "rgb(249, 249, 249)"
                     ],
                     borderWidth: [
                         0, 0
@@ -195,11 +195,11 @@ var deliveredData =
                     data: [70, 30],
                     backgroundColor: [
                         "#3ec556",
-                        "rgba(0,0,0,0)"
+                        "rgb(249, 249, 249)"
                     ],
                     hoverBackgroundColor: [
                         "#3ec556",
-                        "rgba(0,0,0,0)"
+                        "rgb(249, 249, 249)"
                     ],
                     borderWidth: [
                         0, 0
@@ -213,14 +213,14 @@ var deliveredData =
             ],
             datasets: [
                 {
-                    data: [90, 10],
+                    data: [95, 5],
                     backgroundColor: [
                         "#3ec556",
-                        "rgba(0,0,0,0)"
+                        "rgb(249, 249, 249)"
                     ],
                     hoverBackgroundColor: [
                         "#3ec556",
-                        "rgba(0,0,0,0)"
+                        "rgb(249, 249, 249)"
                     ],
                     borderWidth: [
                         0, 0
