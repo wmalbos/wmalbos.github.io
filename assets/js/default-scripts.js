@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     // Loader
-    setTimeout(function() {
+    setTimeout(function () {
         $('#loader').addClass('loader_fade');
     }, 1000);
 
@@ -42,6 +42,17 @@ $(document).ready(function () {
     ];
 
 
+    $('.modal-link').on('click', function (e) {
+        e.preventDefault();
+    });
+
+    // Smooth scroll
+    $('.nav-link').on('click', function () { // Au clic sur un élément
+        var page = $(this).attr('href'); // Page cible
+        var speed = 750; // Durée de l'animation (en ms)
+        $('html, body').animate({scrollTop: $(page).offset().top}, speed); // Go
+        return false;
+    });
 });
 
 
@@ -50,10 +61,19 @@ $(document).ready(function () {
 
 function googleMapInitialization() {
 
+    var myLatLng =
+        {lat: 47.216671, lng: 2.08333};
+
     var map = new google.maps.Map(document.getElementById('googleMap'), {
-        center: {lat: 47.216671, lng: 2.08333},
-        zoom: 13,
+        center: myLatLng,
+        zoom: 7,
         disableDefaultUI: true
+    });
+
+    var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: 'Vierzon'
     });
 }
 
@@ -66,12 +86,12 @@ $(window).scroll(function () {
 
     var iCurScrollPos = $(this).scrollTop();
 
-    if ( ! $('#navigation').hasClass('active') && iCurScrollPos > 200) {
+    if (!$('#navigation').hasClass('active') && iCurScrollPos > 200) {
         $('#navigation').addClass('active');
     }
 
 
-    if ( $('#navigation').hasClass('active') && iCurScrollPos < 200) {
+    if ($('#navigation').hasClass('active') && iCurScrollPos < 200) {
         $('#navigation').removeClass('active');
     }
 
@@ -171,7 +191,7 @@ var deliveredData =
             ],
             datasets: [
                 {
-                    data: [60, 40],
+                    data: [65, 35],
                     backgroundColor: [
                         "#3ec556",
                         "rgb(249, 249, 249)"

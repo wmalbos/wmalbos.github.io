@@ -65,7 +65,7 @@
 <!--                   -->
 <nav id="navigation" class="navbar navbar-expand-md fixed-top navbar-dark">
     <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand nav-link" href="#page-header">
             <img src="#" width="30" height="30" class="d-inline-block align-top" alt="">
             WMalbos
         </a>
@@ -78,10 +78,10 @@
 
         <div id="main-nav" class="collapse navbar-collapse">
             <ul class="navbar-nav ml-auto">
-                <li><a href="#page-header" class="nav-item nav-link">Accueil</a></li>
                 <li><a href="#about" class="nav-item nav-link">A propos</a></li>
                 <li><a href="#competences" class="nav-item nav-link">Compétences</a></li>
                 <li><a href="#cursus" class="nav-item nav-link">Cursus</a></li>
+                <li><a href="#projects" class="nav-item nav-link">Projets</a></li>
                 <li><a href="#contact" class="nav-item nav-link">Contact</a></li>
             </ul>
         </div>
@@ -104,8 +104,8 @@
         <div class="col-md-12">
 
             <p class="controls">
-                <a class="btn btn-primary">Découvrir</a>
-                <a class="btn btn-secondary">Contact</a>
+                <a class="btn btn-primary nav-link" href="#about">Découvrir</a>
+                <a class="btn btn-secondary nav-link" href="#contact">Contact</a>
             </p>
         </div>
     </div>
@@ -137,7 +137,8 @@
 
                     <h2>Qui suis-je ?</h2>
 
-                    <p>Un passioné des nouvelles technologies et du développement depuis tout petit. Je concoit mon
+                    <p><i class="fa fa-quote-left"></i> Un passioné des nouvelles technologies et du développement
+                        depuis tout petit. Je concoit mon
                         travail comme un jeu
                         où il faut construire brique par brique une application de la meilleur qualité possible.</p>
 
@@ -146,7 +147,7 @@
 
                     <p>Ah oui, et je suis un grand buveur de café.. forcement..</p>
 
-                    <button type="button" class="btn btn-primary">Télécharger mon CV</button>
+                    <button type="button" class="btn btn-primary" disabled>Télécharger mon CV</button>
                 </div>
 
                 <!-- RIGHT COLUMN -->
@@ -154,11 +155,11 @@
 
                     <!-- NAV-TABS -->
                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home"
+                        <a class="nav-item  active" id="nav-home-tab" data-toggle="tab" href="#nav-home"
                            role="tab" aria-controls="nav-home" aria-selected="true">Passioné</a>
-                        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile"
+                        <a class="nav-item " id="nav-profile-tab" data-toggle="tab" href="#nav-profile"
                            role="tab" aria-controls="nav-profile" aria-selected="false">Objectifs</a>
-                        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact"
+                        <a class="nav-item " id="nav-contact-tab" data-toggle="tab" href="#nav-contact"
                            role="tab" aria-controls="nav-contact" aria-selected="false">Un jeu ?</a>
                     </div><!--/.nav-tabs-->
 
@@ -168,9 +169,10 @@
 
                         <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
                              aria-labelledby="nav-home-tab">
-                            <p class="tab-introduction">Je suis tombé dans la marmite de technologies étant petit.</p>
+                            <p class="tab-introduction">Tombé dans la marmite de technologies étant petit.</p>
 
-                            <p>La passion du développement m'est venue à l'âge de 12ans. j'ai alors commencé à
+                            <p><i class="fa fa-quote-left"></i> La passion du développement m'est venue à l'âge de
+                                12ans. j'ai alors commencé à
                                 "bidouiller" divers forum en HTML/CSS pour permettre à des groupes de joueurs de
                                 communiquer, prévoir des soirée jeu sur internet, etc..</p>
                             <p>Depuis, cette passion ne ma jamais quitté et c'est tout naturellement que j'ai effectué
@@ -184,7 +186,8 @@
                         <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                             <p class="tab-introduction">Le goût du défis</p>
 
-                            <p>Je travail toujours dans l'objectif de réaliser un code de la meilleur qualité possible
+                            <p><i class="fa fa-quote-left"></i> Je travail toujours dans l'objectif de réaliser un code
+                                de la meilleur qualité possible
                                 pour répondre au besoin du projet. Il est très stimulant de ce remettre en question pour
                                 pouvoir s'adapter et apprendre de la constante évolution des technologies.</p>
                             <p>Ainsi, relever de nouveaux défis est un quotidien pour mener à bien les projets
@@ -192,9 +195,9 @@
                         </div>
 
                         <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                            <p class="tab-introduction">Je vois les projets informatique comme un jeu.</p>
+                            <p class="tab-introduction">Un projet informatique, c'est un jeu !.</p>
 
-                            <p> On débute la partie avec un total de
+                            <p><i class="fa fa-quote-left"></i> On débute la partie avec un total de
                                 100pts, l'objectif étant de la terminer avec un score positif.</p>
                             <p> A chaque développement réalisé on perds des points en fonction de la qualité du
                                 développement. Par exemple, plus le code contient d'erreurs, plus on
@@ -222,18 +225,6 @@
 
     </section>
 
-    <!--                      -->
-    <!-- SECTION - THUMBNAILS -->
-    <!--                      -->
-
-    <div id="thumbnails">
-
-        <div class="row">
-
-
-        </div>
-
-    </div>
 
     <!--                       -->
     <!-- SECTION - COMPETENCES -->
@@ -274,7 +265,7 @@
                         <canvas id="wordpress"></canvas>
 
                         <div class="canvas-percentage">
-                            <p>60%</p>
+                            <p>65%</p>
                         </div>
 
                     </div>
@@ -327,9 +318,9 @@
                             <li>PHP</li>
                             <li>Symfony</li>
 
-                            <li>PhpStorm</li>
+                            <li>JetBrains</li>
                             <li>Git</li>
-                            <li>Symfony</li>
+
 
                         </ul>
                     </footer>
@@ -368,8 +359,8 @@
         <div id="cursusCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
 
             <ol class="carousel-indicators">
-                <li data-target="#cursusCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#cursusCarousel" data-slide-to="1"></li>
+                <li data-target="#cursusCarousel" data-slide-to="0" class="active">1</li>
+                <li data-target="#cursusCarousel" data-slide-to="1">2</li>
 
             </ol>
 
@@ -451,7 +442,9 @@
                     <div class="row">
                         <div class="col-md-12">
                             <footer class="additional-infos">
-                                <p class="info-description">Cette timeline de mon parcours informatique retrace les divers emploi, stage, formation et diplôme que j'ai put effectué ces dernières années.</p>
+                                <p class="info-description">Cette timeline de mon parcours informatique retrace les
+                                    divers emploi, stage, formation et diplôme que j'ai put effectué ces dernières
+                                    années.</p>
                             </footer>
                         </div><!--/.column-->
                     </div><!--/.row-->
@@ -533,7 +526,9 @@
                     <div class="row">
                         <div class="col-md-12">
                             <footer class="additional-infos">
-                                <p class="info-description">Cette timeline représente mon autre parcours où j'ai souhaité explorer divers type de secteur et d'entreprise pour avoir une vision plus globale du monde de l'entreprise avant de me consacrer au métier de développeur.</p>
+                                <p class="info-description">Cette timeline représente mon autre parcours où j'ai
+                                    souhaité explorer divers type de secteur et d'entreprise pour avoir une vision plus
+                                    globale du monde de l'entreprise avant de me consacrer au métier de développeur.</p>
                             </footer>
                         </div><!--/.column-->
                     </div><!--/.row-->
@@ -555,7 +550,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <button type="button" class="btn btn-primary">Envie de travailler ensemble ?</button>
+                    <a href="#contact" class="btn btn-primary nav-link">Envie de travailler ensemble ?</a>
                 </div>
             </div>
         </div>
@@ -570,31 +565,242 @@
 
         <div class="container">
 
-            <header class="row">
-
-                <div class="col-md-12">
-
-                    <h2 class="section-title">Projets</h2>
-                    <p class="section-description">bla bla bla</p>
-
-                </div> <!--/.column -->
-
-            </header><!--/.row -->
+            <header class="section-header">
+                <p class="section-icon"><i class="fa fa-cogs"></i></p>
+                <h2 class="section-title text-center">Réalisations</h2>
+            </header>
 
 
             <!-- PROJECTS CONTENT -->
             <div class="row">
 
-                <div class="col-md-4">
-                    <p class="project-item">Thierry Monicault</p>
+                <div class="col-md-4 project-item">
+
+                    <figure>
+                        <img src="./assets/img/thierrymonicault.png" alt="Screenshot - http://www.thierrymonicault.fr">
+                    </figure>
+
+                    <div class="modal-hover">
+                        <button class="modal-link" data-toggle="modal" data-target="#project_thierrymonicault">
+                            <i class="fa fa-search"></i>
+                        </button>
+
+                        <p class="modal-description">thierrymonicault.fr</p>
+                    </div>
+
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="project_thierrymonicault" tabindex="-1" role="dialog"
+                         aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    ...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--/.modal-->
+
                 </div><!--/.column-->
 
-                <div class="col-md-4">
-                    <p class="project-item">Blog</p>
+                <div class="col-md-4 project-item">
+
+                    <figure>
+                        <img src="./assets/img/soon.png" alt="Screenshot - http://www.thierrymonicault.fr">
+                    </figure>
+
+                    <div class="modal-hover">
+                        <button class="modal-link" data-toggle="modal" data-target="#project_blog">
+                            <i class="fa fa-search"></i>
+                        </button>
+
+                        <p class="modal-description">DWJ #4 - Blog</p>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="project_blog" tabindex="-1" role="dialog"
+                         aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    ...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--/.modal-->
+
                 </div><!--/.column-->
 
-                <div class="col-md-4">
-                    <p class="project-item">Linux</p>
+                <div class="col-md-4 project-item">
+
+                    <figure>
+                        <img src="./assets/img/via.png" alt="Screenshot du développement">
+                    </figure>
+
+                    <div class="modal-hover">
+                        <button class="modal-link" data-toggle="modal" data-target="#project_via">
+                            <i class="fa fa-search"></i>
+                        </button>
+
+                        <p class="modal-description">V.I.A Linux</p>
+                    </div>
+
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="project_via" tabindex="-1" role="dialog"
+                         aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    ...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--/.modal-->
+
+                </div><!--/.column-->
+
+            </div><!--/.row -->
+
+            <div class="row">
+
+                <div class="col-md-4 project-item">
+
+                    <figure>
+                        <img src="./assets/img/webagency.png" alt="Screenshot du projet web agency">
+                    </figure>
+
+                    <div class="modal-hover">
+                        <button class="modal-link" data-toggle="modal" data-target="#project_web_agency">
+                            <i class="fa fa-search"></i>
+                        </button>
+
+                        <p class="modal-description">DWJ #1 - Web Agency</p>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="project_web_agency" tabindex="-1" role="dialog"
+                         aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    ...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--/.modal-->
+
+                </div><!--/.column-->
+
+                <div class="col-md-4 project-item">
+
+                    <figure>
+                        <img src="./assets/img/wordpress.png" alt="Screenshot du projet wordpress">
+                    </figure>
+
+                    <div class="modal-hover">
+                        <button class="modal-link" data-toggle="modal" data-target="#project_wordpress">
+                            <i class="fa fa-search"></i>
+                        </button>
+
+                        <p class="modal-description">DWJ #2 - Wordpress</p>
+                    </div>
+
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="project_wordpress" tabindex="-1" role="dialog"
+                         aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    ...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--/.modal-->
+
+                </div><!--/.column-->
+
+                <div class="col-md-4 project-item">
+
+                    <figure>
+                        <img src="./assets/img/velib.png" alt="Screenshot - Google Map">
+                    </figure>
+
+                    <div class="modal-hover">
+                        <button class="modal-link" data-toggle="modal" data-target="#project_google_map">
+                            <i class="fa fa-search"></i>
+                        </button>
+
+                        <p class="modal-description">DWJ #3 - Google Map</p>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="project_google_map" tabindex="-1" role="dialog"
+                         aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    ...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--/.modal-->
+
                 </div><!--/.column-->
 
             </div><!--/.row -->
@@ -615,28 +821,35 @@
     </section>
 
 
-
     <!--                   -->
     <!-- SECTION - CONTACT -->
     <!--                   -->
 
     <section id="contact">
 
-        <div class="container">
 
-            <div class="row">
+        <div class="row">
 
-                <!-- LEFT COLUMN -->
-                <div class="col-md-6">
+            <!-- LEFT COLUMN -->
+            <div class="col-md-6 contact">
 
-                    <h2 class="section-title">Contact address</h2>
-                    <p class="section-description">bla bla bla</p>
+                <header class="section-header">
+                    <p class="section-icon"><i class="fa fa-envelope"></i></p>
+                    <h2 class="section-title text-center">Me contacter</h2>
+                </header>
 
                     <!-- ADDRESS INFOS -->
                     <table class="address-infos">
+
+
                         <tr>
                             <td><i class="fa fa-user"></i></td>
                             <td>Vierzon - FRANCE</td>
+                        </tr>
+
+                        <tr>
+                            <td><i class="fa fa-globe"></i></td>
+                            <td><a href="http://wmalbos.fr" target="_blank">wmalbos.fr</a></td>
                         </tr>
 
                         <tr>
@@ -649,129 +862,69 @@
                             <td>wmalbos # gmail.com</td>
                         </tr>
 
+
+
                     </table><!--/.adress-infos -->
 
-                    <!-- SOCIAL NETWORKS -->
-                    <ul class="social-networks">
-                        <li>
-                            <i class="fa fa-facebook"></i>
-                        </li>
 
-                        <li>
-                            <i class="fa fa-twitter"></i>
-                        </li>
 
-                        <li>
-                            <i class="fa fa-linkedin"></i>
-                        </li>
 
-                        <li>
-                            <i class="fa fa-viadeo"></i>
-                        </li>
-                    </ul><!--/.social-networks -->
+                <!--               -->
+                <!-- PAGE - FOOTER -->
+                <!--               -->
+                <footer id="page-footer">
 
-                </div><!--/.column-->
 
-                <!-- RIGHT COLUMN -->
-                <div class="col-md-6">
+                    <div class="row">
 
-                    <form action="#" class="contact-form">
+                        <div class="col-md-12 footer-content">
 
-                        <!-- FORM FIRST ROW -->
-                        <div class="row">
+                            <p class="copyrights">© 2018 William Malbos - Développeur web polyvalent</p>
 
-                            <!-- NAME -->
-                            <div class="col-md-6">
 
-                                <input type="text" placeholder="Nom">
+                            <!-- SOCIAL NETWORKS -->
+                            <ul class="social-networks">
 
-                            </div><!--/.column-->
+                                <li>
+                                    <a href="https://github.com/wmalbos" target="_blank"><i class="fa fa-github"></i></a>
+                                </li>
 
-                            <!-- EMAIL -->
-                            <div class="col-md-6">
+                                <li>
+                                    <a href="https://www.facebook.com/wmalbos" target="_blank"><i
+                                            class="fa fa-facebook"></i></a>
+                                </li>
 
-                                <input type="email" placeholder="Email">
+                                <li>
+                                    <a href="https://twitter.com/wmalbos" target="_blank"><i class="fa fa-twitter"></i></a>
+                                </li>
 
-                            </div><!--/.column-->
+                                <li>
+                                    <a href="https://www.linkedin.com/in/wmalbos" target="_blank"><i class="fa fa-linkedin"></i></a>
+                                </li>
 
-                        </div><!--/.row -->
+                            </ul><!--/.social-networks -->
 
-                        <!-- FORM SECOND ROW -->
-                        <div class="row">
+                        </div><!--/.column-->
 
-                            <!-- SUBJECT-->
-                            <div class="col-md-12">
+                    </div><!--/.row-->
 
-                                <input type="text" placeholder="Sujet">
 
-                            </div><!--/.column-->
+                </footer>
 
-                        </div><!--/.row -->
+            </div><!--/.column-->
 
-                        <!-- FORM THIRD ROW -->
-                        <div class="row">
+            <div class="col-md-6">
 
-                            <!-- MESSAGE -->
-                            <div class="col-md-12">
+                <div id="googleMap"></div>
+            </div>
 
-                                <textarea name="message" id="message" cols="30" rows="10">Message</textarea>
+        </div><!--/.row -->
 
-                            </div><!--/.column-->
-
-                        </div><!--/.row -->
-
-                        <!-- FORM SUBMIT -->
-                        <div class="row">
-
-                            <!-- SUBMIT BUTTON -->
-                            <div class="col-md-12">
-
-                                <input type="submit" value="Envoyer">
-
-                            </div><!--/.column-->
-
-                        </div><!--/.row -->
-
-                    </form><!-- /.contact-form -->
-
-                </div><!--/.column-->
-
-            </div><!--/.row -->
-
-        </div><!--/.container -->
 
     </section>
 
 
-    <!--                      -->
-    <!-- SECTION - GOOGLE MAP -->
-    <!--                      -->
-
-    <div id="googleMap"></div>
-
 </main>
-
-
-<!--               -->
-<!-- PAGE - FOOTER -->
-<!--               -->
-<footer id="page-footer">
-
-    <div class="container">
-
-        <div class="row">
-
-            <div class="col-sm-6">
-
-                <p class="copyrights">© 2018 William Malbos - Développeur web polyvalent</p>
-
-            </div><!--/.column-->
-
-        </div><!--/.row-->
-
-    </div><!--/.container -->
-
-</footer>
 
 
 <!--             -->
