@@ -435,6 +435,36 @@ h1, h2, h3 {
       align-items: center;
       justify-content: center;
       outline: none; }
+    #page-content #projects .modal-table {
+      margin: 100px 0;
+      position: relative;
+      color: #6c747d; }
+      #page-content #projects .modal-table:before {
+        content: "";
+        position: absolute;
+        top: -50px;
+        left: calc(50% - 100px);
+        width: 200px;
+        height: 1px;
+        background: #ef2d56; }
+      #page-content #projects .modal-table tr:nth-child(1),
+      #page-content #projects .modal-table tr:nth-child(2) {
+        border-bottom: 1px dashed #6c747d; }
+      #page-content #projects .modal-table th {
+        font-weight: bold;
+        letter-spacing: 2px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column; }
+      #page-content #projects .modal-table td {
+        padding: 0 25px 25px 25px;
+        max-width: 900px; }
+        #page-content #projects .modal-table td ul {
+          margin: 0;
+          padding: 0; }
+          #page-content #projects .modal-table td ul li {
+            list-style: none; }
   #page-content #contact {
     color: white;
     background: #191b1d; }
@@ -506,5 +536,47 @@ h1, h2, h3 {
           cursor: pointer; }
           #page-footer .footer-content .social-networks li:hover a {
             color: #ef2d56; }
+
+.modal .modal-header {
+  background: #f9f9f9;
+  text-transform: uppercase; }
+.modal .modal-footer {
+  background: black;
+  color: white; }
+.modal .modal-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+  .modal .modal-body .row:first-child {
+    max-width: 100%; }
+.modal .modal-dialog {
+  width: 90% !important;
+  max-width: 90% !important; }
+.modal .list-inline {
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin: 10px 0 0 0; }
+.modal .carousel-inner img {
+  max-height: 600px;
+  margin: auto;
+  display: block; }
+.modal .carousel-indicators {
+  position: static;
+  left: initial;
+  width: initial;
+  margin-left: initial; }
+.modal .carousel-indicators > li {
+  width: initial;
+  height: initial;
+  text-indent: initial;
+  cursor: pointer; }
+  .modal .carousel-indicators > li img {
+    height: 75px; }
+.modal .carousel-indicators > li.active img {
+  opacity: 0.7; }
+.modal .carousel-indicators > li.disable {
+  display: none; }
 
 /*# sourceMappingURL=default-styles.css.map */
