@@ -25,6 +25,10 @@ html, body {
   position: relative;
 }
 
+.row {
+  margin: 0;
+  padding: 0;
+}
 // TITLES
 h1, h2, h3 {
   font-family: 'Montserrat', sans-serif;
@@ -689,6 +693,10 @@ a {
     .btn {
       display: inline-block;
     }
+
+    .text-center{
+      padding: 0;
+    }
   }
 
   // PROJECTS
@@ -858,7 +866,6 @@ a {
       }
     }
 
-
   }
 
   // CONTACT
@@ -992,7 +999,6 @@ a {
 
 }
 
-
 .modal {
 
   .modal-header {
@@ -1028,12 +1034,12 @@ a {
 
   }
 
-  .carousel-inner{
+  .carousel-inner {
 
     .carousel-item {
 
     }
-    img{
+    img {
       max-height: 600px;
       margin: auto;
       display: block;
@@ -1074,6 +1080,289 @@ a {
 // SMARTPHONE
 @media all and (max-width: 768px) {
 
+  // SECTION
+  .section-header {
+
+    .section-title {
+
+      font-size: 30px;
+
+    }
+
+    .section-icon {
+      margin: 0;
+      padding: 0;
+
+      font-size: 40px;
+    }
+
+  }
+
+  // NAV-TABS
+  .nav-tabs {
+
+    width: 100%;
+
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .nav-item {
+      margin-right: 0;
+    }
+  }
+
+  .tab-content {
+
+    .tab-introduction {
+      font-weight: bold;
+      font-size: 16px;
+
+    }
+
+  }
+
+  // NAVIGATION
+  ////////////////
+  #navigation {
+
+    padding: 0;
+    margin: 0;
+
+    background: $cWhite;
+
+    .container {
+
+    }
+
+    .nav-link {
+      color: $cBlack;
+
+
+    }
+    .navbar-toggler {
+      border: none;
+      color: $cBlack;
+
+        outline: none;
+
+
+      .fa {
+
+        font-size: 24px;
+      }
+    }
+
+  }
+
+  // HEADER
+  ////////////////
+
+  #page-header {
+
+    .page-title {
+      font-size: 3em;
+    }
+
+    .row-controls {
+
+      width: 100%;
+
+      position: absolute;
+      bottom: 5px;
+      left: 0;
+
+      padding: 0;
+      margin: 0;
+
+      .controls {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        padding: 0;
+        margin: 0;
+
+        .nav-link {
+          width: 100%;
+          margin: 5px 10px;
+        }
+      }
+
+    }
+  }
+  // MAIN
+  ////////////////
+  #page-content {
+
+    // ABOUT
+    ////////////////
+    #about {
+
+      .column {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+    }
+
+    // COMPETENCES
+    ////////////////
+    #competences {
+
+      .column {
+        padding-top: 50px;
+
+        &:first-child {
+          padding-top: 0;
+        }
+      }
+
+      .canvas-title {
+        font-size: 16px;
+      }
+
+      .additional-infos,
+      .revise-infos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .info-title {
+          margin: 0 0 15px 0;
+        }
+        .language-list {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+        }
+      }
+
+      .revise-infos {
+        padding-top: 25px;
+      }
+    }
+
+    // CURSUS
+    ////////////////
+
+    #cursus {
+
+      .carousel-inner {
+
+        header {
+          border-bottom: none;
+        }
+      }
+      .cursus-item {
+
+        margin-bottom: 25px;
+        .row {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+
+          border-bottom: 1px solid $cBorder;
+
+          &:last-child {
+            border: none;
+          }
+        }
+
+        .cursus-item__header,
+        .cursus-item__content {
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+
+          border: none;
+
+          padding: 10px;
+
+          &:after {
+            display: none;
+          }
+
+          &:before {
+            display: none;
+          }
+
+        }
+
+      }
+    }
+    // PROJECTS
+    ////////////////
+
+    #projects {
+      .project-item {
+        padding: 5px 10px;
+
+        &:hover {
+          .modal-hover {
+            opacity: 0;
+          }
+        }
+      }
+    }
+
+    // CONTACT
+    ////////////////
+
+    #contact {
+
+      #googleMap {
+        display: none;
+      }
+      // FOOTER
+      ////////////////
+
+      #page-footer {
+
+        .footer-content {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column-reverse;
+        }
+
+        .copyrights {
+          height: auto;
+          text-align: center;
+          line-height: 25px;
+
+          margin: 0;
+          padding: 10px;
+
+          span {
+            display: block;
+          }
+        }
+
+        .social-networks {
+          margin-bottom: 25px;
+        }
+      }
+
+    }
+  }
+
+  .modal-dialog {
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0;
+    padding: 0;
+  }
 }
 
 // TABLETTE

@@ -5,6 +5,10 @@ html, body {
   padding: 0;
   position: relative; }
 
+.row {
+  margin: 0;
+  padding: 0; }
+
 h1, h2, h3 {
   font-family: 'Montserrat', sans-serif;
   position: relative;
@@ -366,6 +370,8 @@ h1, h2, h3 {
     background: url("../img/bg.jpg") center; }
     #page-content #question .btn {
       display: inline-block; }
+    #page-content #question .text-center {
+      padding: 0; }
   #page-content #projects {
     padding: 0 0 100px 0; }
     #page-content #projects .project-item {
@@ -578,5 +584,141 @@ h1, h2, h3 {
   opacity: 0.7; }
 .modal .carousel-indicators > li.disable {
   display: none; }
+
+@media all and (max-width: 768px) {
+  .section-header .section-title {
+    font-size: 30px; }
+  .section-header .section-icon {
+    margin: 0;
+    padding: 0;
+    font-size: 40px; }
+
+  .nav-tabs {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .nav-tabs .nav-item {
+      margin-right: 0; }
+
+  .tab-content .tab-introduction {
+    font-weight: bold;
+    font-size: 16px; }
+
+  #navigation {
+    padding: 0;
+    margin: 0;
+    background: white; }
+    #navigation .nav-link {
+      color: black; }
+    #navigation .navbar-toggler {
+      border: none;
+      color: black;
+      outline: none; }
+      #navigation .navbar-toggler .fa {
+        font-size: 24px; }
+
+  #page-header .page-title {
+    font-size: 3em; }
+  #page-header .row-controls {
+    width: 100%;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    padding: 0;
+    margin: 0; }
+    #page-header .row-controls .controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 0;
+      margin: 0; }
+      #page-header .row-controls .controls .nav-link {
+        width: 100%;
+        margin: 5px 10px; }
+
+  #page-content #about .column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }
+  #page-content #competences .column {
+    padding-top: 50px; }
+    #page-content #competences .column:first-child {
+      padding-top: 0; }
+  #page-content #competences .canvas-title {
+    font-size: 16px; }
+  #page-content #competences .additional-infos,
+  #page-content #competences .revise-infos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }
+    #page-content #competences .additional-infos .info-title,
+    #page-content #competences .revise-infos .info-title {
+      margin: 0 0 15px 0; }
+    #page-content #competences .additional-infos .language-list,
+    #page-content #competences .revise-infos .language-list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column; }
+  #page-content #competences .revise-infos {
+    padding-top: 25px; }
+  #page-content #cursus .carousel-inner header {
+    border-bottom: none; }
+  #page-content #cursus .cursus-item {
+    margin-bottom: 25px; }
+    #page-content #cursus .cursus-item .row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      border-bottom: 1px solid #dddddd; }
+      #page-content #cursus .cursus-item .row:last-child {
+        border: none; }
+    #page-content #cursus .cursus-item .cursus-item__header,
+    #page-content #cursus .cursus-item .cursus-item__content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      border: none;
+      padding: 10px; }
+      #page-content #cursus .cursus-item .cursus-item__header:after,
+      #page-content #cursus .cursus-item .cursus-item__content:after {
+        display: none; }
+      #page-content #cursus .cursus-item .cursus-item__header:before,
+      #page-content #cursus .cursus-item .cursus-item__content:before {
+        display: none; }
+  #page-content #projects .project-item {
+    padding: 5px 10px; }
+    #page-content #projects .project-item:hover .modal-hover {
+      opacity: 0; }
+  #page-content #contact #googleMap {
+    display: none; }
+  #page-content #contact #page-footer .footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse; }
+  #page-content #contact #page-footer .copyrights {
+    height: auto;
+    text-align: center;
+    line-height: 25px;
+    margin: 0;
+    padding: 10px; }
+    #page-content #contact #page-footer .copyrights span {
+      display: block; }
+  #page-content #contact #page-footer .social-networks {
+    margin-bottom: 25px; }
+
+  .modal-dialog {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0; } }
 
 /*# sourceMappingURL=default-styles.css.map */
