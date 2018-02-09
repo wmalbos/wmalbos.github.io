@@ -374,7 +374,8 @@ h1, h2, h3 {
     margin: 100px 0;
     background: url("../img/bg.jpg") center; }
     #page-content #question .btn {
-      display: inline-block; }
+      display: inline-block;
+      width: 100%; }
     #page-content #question .text-center {
       padding: 0; }
   #page-content #projects {
@@ -605,7 +606,6 @@ h1, h2, h3 {
 
   .nav-tabs {
     width: 100%;
-    margin-top: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between; }
@@ -616,6 +616,98 @@ h1, h2, h3 {
     font-weight: bold;
     font-size: 16px; }
 
+  #navigation .navbar-nav li {
+    margin-left: 10px; }
+
+  #page-header .page-title {
+    font-size: 4em;
+    letter-spacing: 3px;
+    margin-bottom: 75px; }
+  #page-header .page-description {
+    font-size: 1.5em;
+    bottom: 90%; }
+    #page-header .page-description:after {
+      height: 10px; }
+  #page-header .row-controls {
+    width: 100%;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    padding: 0;
+    margin: 0; }
+    #page-header .row-controls .controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 0;
+      margin: 0; }
+      #page-header .row-controls .controls .nav-link {
+        width: 100%;
+        margin: 5px 10px; }
+
+  #page-content #about .about__presentation {
+    padding: 0 0 50px 0; }
+  #page-content #about .column {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-bottom: 50px; }
+  #page-content #competences .section-title {
+    margin: 0 0 25px 0; }
+  #page-content #competences .column {
+    padding: 50px 0 0 0; }
+  #page-content #competences .canvas-title {
+    font-size: 16px; }
+  #page-content #competences .additional-infos,
+  #page-content #competences .revise-infos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }
+    #page-content #competences .additional-infos .info-title,
+    #page-content #competences .revise-infos .info-title {
+      margin: 0 0 15px 0; }
+    #page-content #competences .additional-infos .language-list,
+    #page-content #competences .revise-infos .language-list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap; }
+  #page-content #competences .revise-infos {
+    padding-top: 25px; }
+  #page-content #projects .project-item {
+    padding: 5px 10px; }
+    #page-content #projects .project-item:hover .modal-hover {
+      opacity: 0; }
+  #page-content #contact #googleMap {
+    display: none; }
+  #page-content #contact #page-footer .footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse; }
+  #page-content #contact #page-footer .copyrights {
+    height: auto;
+    text-align: center;
+    line-height: 25px;
+    margin: 0;
+    padding: 10px; }
+    #page-content #contact #page-footer .copyrights span {
+      display: block; }
+  #page-content #contact #page-footer .social-networks {
+    margin-bottom: 25px; }
+
+  .modal .carousel-inner {
+    height: 400px; }
+  .modal .modal-dialog {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 100%;
+    margin: 0;
+    padding: 0; } }
+@media all and (max-width: 767px) {
   #navigation {
     padding: 0;
     margin: 0;
@@ -668,36 +760,6 @@ h1, h2, h3 {
         width: 100%;
         margin: 5px 10px; }
 
-  #page-content #about .about__presentation {
-    padding: 0 0 50px 0; }
-  #page-content #about .column {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column; }
-  #page-content #competences .column {
-    padding-top: 50px; }
-    #page-content #competences .column:first-child {
-      padding-top: 0; }
-  #page-content #competences .canvas-title {
-    font-size: 16px; }
-  #page-content #competences .additional-infos,
-  #page-content #competences .revise-infos {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column; }
-    #page-content #competences .additional-infos .info-title,
-    #page-content #competences .revise-infos .info-title {
-      margin: 0 0 15px 0; }
-    #page-content #competences .additional-infos .language-list,
-    #page-content #competences .revise-infos .language-list {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap; }
-  #page-content #competences .revise-infos {
-    padding-top: 25px; }
   #page-content #cursus .carousel-inner header {
     border-bottom: none; }
   #page-content #cursus .cursus-item {
@@ -736,35 +798,13 @@ h1, h2, h3 {
       #page-content #cursus .cursus-item .cursus-item__header:before,
       #page-content #cursus .cursus-item .cursus-item__content:before {
         display: none; }
-  #page-content #projects .project-item {
-    padding: 5px 10px; }
-    #page-content #projects .project-item:hover .modal-hover {
-      opacity: 0; }
-  #page-content #contact #googleMap {
-    display: none; }
-  #page-content #contact #page-footer .footer-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column-reverse; }
-  #page-content #contact #page-footer .copyrights {
-    height: auto;
-    text-align: center;
-    line-height: 25px;
-    margin: 0;
-    padding: 10px; }
-    #page-content #contact #page-footer .copyrights span {
-      display: block; }
-  #page-content #contact #page-footer .social-networks {
-    margin-bottom: 25px; }
 
-  .modal .carousel-inner {
-    height: 400px; }
-  .modal .modal-dialog {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-height: 100%;
-    margin: 0;
-    padding: 0; } }
+  .modal .modal-table tr {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column; }
+    .modal .modal-table tr td {
+      text-align: justify; } }
 
 /*# sourceMappingURL=default-styles.css.map */

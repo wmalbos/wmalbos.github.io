@@ -239,6 +239,13 @@ function initializePortfolioModals() {
                 '</div> ';
         }
 
+        if (portfolio_items[i].img.length <= 1){
+            str +=
+                '<div class="item carousel-item active" data-slide-number="1"> ' +
+                '   <img src="' + PORTFOLIO_DIRECTORY + EMPTY_IMAGE + '" class="img-fluid"> ' +
+                '</div> ';
+        }
+
         str +=
 
             '                           </div> ' +

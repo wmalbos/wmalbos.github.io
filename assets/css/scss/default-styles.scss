@@ -29,6 +29,7 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
 // TITLES
 h1, h2, h3 {
   font-family: 'Montserrat', sans-serif;
@@ -282,13 +283,12 @@ a {
 
   background: $cWhite;
 
-
   .navbar-nav {
     li {
       margin-left: 25px;
 
       a {
-        color:$cBlack;
+        color: $cBlack;
       }
     }
     li:last-child {
@@ -701,9 +701,10 @@ a {
 
     .btn {
       display: inline-block;
+      width: 100%;
     }
 
-    .text-center{
+    .text-center {
       padding: 0;
     }
   }
@@ -825,8 +826,6 @@ a {
       outline: none;
 
     }
-
-
 
   }
 
@@ -1065,7 +1064,6 @@ a {
     width: initial;
     margin-left: initial;
 
-
   }
 
   .carousel-indicators > li {
@@ -1074,7 +1072,7 @@ a {
     text-indent: initial;
     cursor: pointer;
 
-    border:1px solid $cBlack;
+    border: 1px solid $cBlack;
     padding: 5px;
 
     background: $cBackground_grey;
@@ -1123,7 +1121,6 @@ a {
 
     width: 100%;
 
-    margin-top: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1147,52 +1144,15 @@ a {
   ////////////////
   #navigation {
 
-    padding: 0;
-    margin: 0;
-
-    background: $cWhite;
-
     .navbar-collapse {
-      background: $cBackground_grey;
-      border-bottom:1px solid $cBorder;
+
     }
     .navbar-nav {
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-
-      li:last-child {
-        border:none;
+      li {
+    margin-left: 10px;
       }
-    }
 
-    .navbar-brand {
-      img {
-        height: 40px;
-      }
-    }
-    .container {
-
-    }
-
-    .nav-link {
-      color: $cBlack;
-
-
-    }
-    .navbar-toggler {
-      border: none;
-      color: $cBlack;
-
-        outline: none;
-
-
-      .fa {
-
-        font-size: 40px;
-      }
     }
 
   }
@@ -1203,13 +1163,13 @@ a {
   #page-header {
 
     .page-title {
-      font-size: 1.9em;
-      letter-spacing: 1px;
+      font-size: 4em;
+      letter-spacing: 3px;
       margin-bottom: 75px;
     }
 
     .page-description {
-      font-size: 1em;
+      font-size: 1.5em;
       bottom: 90%;
 
       &:after {
@@ -1246,6 +1206,7 @@ a {
 
     }
   }
+
   // MAIN
   ////////////////
   #page-content {
@@ -1254,15 +1215,16 @@ a {
     ////////////////
     #about {
 
-
       .about__presentation {
         padding: 0 0 50px 0;
       }
       .column {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         flex-direction: column;
+
+        margin-bottom: 50px;
       }
     }
 
@@ -1270,12 +1232,12 @@ a {
     ////////////////
     #competences {
 
+      .section-title {
+        margin: 0 0 25px 0;
+      }
       .column {
-        padding-top: 50px;
+        padding: 50px 0 0 0;
 
-        &:first-child {
-          padding-top: 0;
-        }
       }
 
       .canvas-title {
@@ -1305,70 +1267,6 @@ a {
       }
     }
 
-    // CURSUS
-    ////////////////
-
-    #cursus {
-
-      .carousel-inner {
-
-        header {
-          border-bottom: none;
-        }
-      }
-      .cursus-item {
-
-        margin-bottom: 15px;
-
-        padding-bottom: 15px;
-        border-bottom: 1px solid $cBorder;
-        .row {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-direction: column;
-
-          border-bottom: 1px solid $cBorder;
-
-          &:last-child {
-            border: none;
-          }
-        }
-
-        .cursus-item__header,
-        .cursus-item__content {
-
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-direction: column;
-
-          border: none;
-
-          padding: 10px;
-
-          .cursus-title,
-          .cursus-date ,
-          .cursus-status {
-            text-align: center;
-          }
-
-          .cursus-description {
-            text-align: justify;
-          }
-
-          &:after {
-            display: none;
-          }
-
-          &:before {
-            display: none;
-          }
-
-        }
-
-      }
-    }
     // PROJECTS
     ////////////////
 
@@ -1437,8 +1335,196 @@ a {
       margin: 0;
       padding: 0;
     }
+
   }
+
 }
 
+// SMARTPHONE
+@media all and (max-width: 767px) {
 
+  // NAVIGATION
+  ////////////////
+  #navigation {
 
+    padding: 0;
+    margin: 0;
+
+    background: $cWhite;
+
+    .navbar-collapse {
+      background: $cBackground_grey;
+      border-bottom: 1px solid $cBorder;
+    }
+    .navbar-nav {
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      li:last-child {
+        border: none;
+      }
+    }
+
+    .navbar-brand {
+      img {
+        height: 40px;
+      }
+    }
+    .container {
+
+    }
+
+    .nav-link {
+      color: $cBlack;
+
+    }
+    .navbar-toggler {
+      border: none;
+      color: $cBlack;
+
+      outline: none;
+
+      .fa {
+
+        font-size: 40px;
+      }
+    }
+
+  }
+
+  // HEADER
+  ////////////////
+
+  #page-header {
+
+    .page-title {
+      font-size: 1.9em;
+      letter-spacing: 1px;
+      margin-bottom: 75px;
+    }
+
+    .page-description {
+      font-size: 1em;
+      bottom: 90%;
+
+      &:after {
+        height: 10px;
+      }
+    }
+
+    .row-controls {
+
+      width: 100%;
+
+      position: absolute;
+      bottom: 5px;
+      left: 0;
+
+      padding: 0;
+      margin: 0;
+
+      .controls {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        padding: 0;
+        margin: 0;
+
+        .nav-link {
+          width: 100%;
+          margin: 5px 10px;
+        }
+      }
+
+    }
+  }
+
+  #page-content {
+    // CURSUS
+    ////////////////
+
+    #cursus {
+
+      .carousel-inner {
+
+        header {
+          border-bottom: none;
+        }
+      }
+      .cursus-item {
+
+        margin-bottom: 15px;
+
+        padding-bottom: 15px;
+        border-bottom: 1px solid $cBorder;
+        .row {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+
+          border-bottom: 1px solid $cBorder;
+
+          &:last-child {
+            border: none;
+          }
+        }
+
+        .cursus-item__header,
+        .cursus-item__content {
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+
+          border: none;
+
+          padding: 10px;
+
+          .cursus-title,
+          .cursus-date,
+          .cursus-status {
+            text-align: center;
+          }
+
+          .cursus-description {
+            text-align: justify;
+          }
+
+          &:after {
+            display: none;
+          }
+
+          &:before {
+            display: none;
+          }
+
+        }
+
+      }
+    }
+  }
+
+  .modal {
+    .modal-table {
+      tr {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+
+        td {
+          text-align: justify;
+        }
+      }
+    }
+  }
+
+}
