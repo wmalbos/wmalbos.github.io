@@ -595,7 +595,7 @@ h1, h2, h3 {
 .modal .carousel-indicators > li.disable {
   display: none; }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 992px) {
   .section-header .section-title {
     font-size: 30px; }
   .section-header .section-icon {
