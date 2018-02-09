@@ -280,9 +280,16 @@ a {
 
   z-index: 999;
 
+  background: $cWhite;
+
+
   .navbar-nav {
     li {
       margin-left: 25px;
+
+      a {
+        color:$cBlack;
+      }
     }
     li:last-child {
       border: 1px solid $cRed;

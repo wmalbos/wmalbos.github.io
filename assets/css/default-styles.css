@@ -137,9 +137,12 @@ h1, h2, h3 {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 999; }
+  z-index: 999;
+  background: white; }
   #navigation .navbar-nav li {
     margin-left: 25px; }
+    #navigation .navbar-nav li a {
+      color: black; }
   #navigation .navbar-nav li:last-child {
     border: 1px solid #ef2d56; }
   #navigation.active {

@@ -6,18 +6,18 @@
       "title" : "Passioné",
       "introduction" : "Tombé dans la marmite de technologies étant petit.",
       "paragraphs" : [
-        "<i class=\"fa fa-quote-left\"></i> La passion du développement m'est venue à l'âge de 12ans. j'ai alors commencé à \"bidouiller\" divers forum en HTML/CSS pour permettre à des groupes de joueurs de communiquer, prévoir des soirée jeu sur internet, etc..",
-        "Depuis, cette passion ne ma jamais quitté et c'est tout naturellement que j'ai effectué une poursuite d'etude universitaire en ingénierie de l'informatique à l'Université d'Orléans puis des des parcours diplômants avec l'école OpenClass Room.",
-        "Sur mon temps libre je continue à découvrir, apprendre, bidouiller, les nouvelles technologies en réalisant diverses applications comme des site internet, jeux, 3D, etc.."
+        "<i class=\"fa fa-quote-left\"></i>  La passion du développement m'est venue à l'âge de 12ans. j'ai alors commencé à \"bidouiller\" divers forums en HTML/CSS pour permettre à des groupes de joueurs de communiquer, prévoir des soirée jeux sur internet, etc..",
+        "Depuis, cette passion ne m’a jamais quittée et c'est tout naturellement que j'ai poursuivi des études universitaires en ingénierie de l'informatique à l'Université d'Orléans puis des parcours diplômants avec l'école OpenClass Room.",
+        "Sur mon temps libre je continue à découvrir, apprendre, bidouiller, les nouvelles technologies en réalisant diverses applications comme des sites internet, jeux, 3D, etc.."
       ]
     },
 
     {
       "id" : "goals",
       "title" : "Objectifs",
-      "introduction" : "Le goût du défis.",
+      "introduction" : "Le goût du défi",
       "paragraphs" : [
-        "<i class=\"fa fa-quote-left\"></i> Je travail toujours dans l'objectif de réaliser un code de la meilleur qualité possible pour répondre au besoin du projet. Il est très stimulant de ce remettre en question pour pouvoir s'adapter et apprendre de la constante évolution des technologies.",
+        "<i class=\"fa fa-quote-left\"></i>  Je travail toujours dans l'objectif de réaliser un code de la meilleure qualité possible pour répondre au besoin du projet. Il est très stimulant de ce remettre en question pour pouvoir s'adapter et apprendre de la constante évolution des technologies.",
         "Ainsi, relever de nouveaux défis est un quotidien pour mener à bien les projets rapidement avec un code de qualité."
       ]
     },
@@ -25,12 +25,12 @@
     {
       "id" : "game",
       "title" : "Un jeu ?",
-      "introduction" : "Un projet informatique, c'est un jeu !.",
+      "introduction" : "Un projet informatique, c'est un jeu !",
       "paragraphs" : [
-        "<i class=\"fa fa-quote-left\"></i> On débute la partie avec un total de 100pts, l'objectif étant de la terminer avec un score positif.",
-        "A chaque développement réalisé on perds des points en fonction de la qualité du développement. Par exemple, plus le code contient d'erreurs, plus on perds de points. Moins on a de points, plus il est difficile de réaliser du code de qualité à cause des erreurs précédente. Il est alors primordiale de toujours penser à développer correctement pour faciliter les développements futurs et améliorer leurs temps de production.",
-        "Bien sûr en théorie, lorsque l'on dépasse le délais de livraison c'est la fin du jeu et lorsque que l'on reprends un projets ultérieurement pour modifications on reprends également le nombre de points de ce dernier.",
-        "On peu voir ceci comme un jeux de stratégie où il est plus aisé de perdre ou de finir avec des petits scores. C'est pour cela qu'il est existant de chercher à s'améliorer pour réaliser le plus haut score possible !"
+        "<i class=\"fa fa-quote-left\"></i>  On débute la partie avec un total de 100pts, l'objectif étant de la terminer avec un score positif.",
+        "A chaque développement réalisé on perd des points en fonction de la qualité du développement. Par exemple, plus le code contient d'erreurs, plus on perd de points. Moins on a de points, plus il est difficile de réaliser du code de qualité à cause des erreurs précédentes. Il est alors primordial de toujours penser à développer correctement pour faciliter les développements futurs et améliorer leurs temps de production.",
+        "Bien sûr en théorie, lorsque l'on dépasse le délai de livraison c'est la fin du jeu et lorsque que l'on reprend un projet ultérieurement pour modifications on reprend également le nombre de points de ce dernier. ",
+        "On peut voir ceci comme un jeu de stratégie où il est plus aisé de perdre ou de finir avec des petits scores. C'est pour cela qu'il est important de chercher à s'améliorer pour réaliser le plus haut score possible !"
       ]
     }
   ],
@@ -40,22 +40,41 @@
       "id": "cursus-developer_content",
       "content": [
         {
-          "title": "Gilles leroux industrie",
-          "date": "Date du cursus",
-          "status": "CDD",
-          "description": "ma description"
+          "title": "Développeur d'application - PHP/Symfony",
+          "date": "A venir",
+          "status": "Formation diplômante - Bac +3/4",
+          "description": "Lors de cette formation j'aurai l'occasion d'approfondir mes connaissances dans la réalisation complète d'application en PHP/Symfony du besoin du client à la livraison. (UML, blog, site eCommerce, API, Wordpress, reprise d'application, ...) "
+        },
+
+        {
+          "title": "Développeur Web Junior",
+          "date": "Depuis Septembre 2017",
+          "status": "Formation diplômante - Bac +2",
+          "description": "Lors de cette formation j'ai eu l'occasion d'approfondir mes connissances dans les technologies du web (HTML5, CSS3, Javascript, jQuery, AJAX, PHP5, Symfony3).<br /><br /> Mon dernier projet à été la réalisation complète d'un site internet pour un client permettant l'écoute, téléchargement, visualisation de musiques ainsi que de vidéos."
         },
         {
-          "title": "Gilles leroux industrie",
-          "date": "Date du cursus",
-          "status": "CDD",
-          "description": "ma description"
+          "title": "Développeur Web Junior",
+          "date": "Mars - Septembre 2017",
+          "status": "Formation et formateur",
+          "description": "Lors de cette formation proposée par le groupe EGEE, j'ai eu l'occasion d'endosser le rôle de formateur pour aider les autres étudiants à appréhender diverses notions (HTML5, CSS3, Javascript, AJAX, POO, Algorithmie, Git, Terminal ...) "
         },
         {
-          "title": "Gilles leroux industrie",
-          "date": "Date du cursus",
-          "status": "CDD",
-          "description": "ma description"
+          "title": "Autodidacte",
+          "date": "Depuis Janvier 2017",
+          "status": "Formation en autodidacte",
+          "description": "Cours suivis sur les platformes d'OpenClass Room et Alphorm notamment."
+        },
+        {
+          "title": "Gille Leroux Industrie",
+          "date": "Avril - Août 2015",
+          "status": "Stage de fin de licence",
+          "description": "Développement de modules pour piloter des périphériques biométriques (scanner d'empreintes digitales, lecteur de code-barres, etc...), tout en respectant un cahier des charges. Ce projet a été validé par le client et mis en production. <br /><br />Dans la deuxième partie du stage j'ai effectué une restructuration d'un logiciel déjà présent."
+        },
+        {
+          "title": "Licence - Ingénierie de l'informatique",
+          "date": "Promotion 2015",
+          "status": "Formation diplômante - Bac +3",
+          "description": "Etudes réalisées à l'Université d'Orléans avec l'obtention d'une mention bien."
         }
       ]
     },
@@ -87,86 +106,155 @@
   "portfolio": [
     {
       "id": "project_thierrymonicault",
-      "client": "",
-      "title": "",
+      "client": "Mr Thierry Monicault",
+      "title": "Projet Client",
       "img": [
-        "thierrymonicault.png",
-        "thierrymonicault.png"
+        "tmonicault/01.png",
+        "tmonicault/02.png",
+        "tmonicault/03.png",
+        "tmonicault/04.png",
+        "tmonicault/05.png",
+        "tmonicault/06.png",
+        "tmonicault/07.png",
+        "tmonicault/08.png",
+        "tmonicault/09.png"
+
       ],
       "technologies": [
         "HTML5/CSS3",
-        "PHP5"
+        "SASS",
+        "SASS",
+        "Javascript",
+        "jQuery",
+        "PHP5",
+        "Symfony3",
+        "POO",
+        "MVC"
       ],
-      "description": "",
+      "description": "Projet en fin de développement...<br /><br />Ce site internet est à destination de Mr Monicault. Il as pour objectif de permettre l'écoute/téléchargement/visionnage d'audios/partitions/vidéos. Il est également possible de consulter et d'imprimer le calendrier de ses représentations.<br /><br />Ce site internet ce devais simple et moderne car il touche une population plus âgé comme il concerne l'accordéon. <br /><br />Enfin il se devait être complètement utilisable et personalisable par le client pour qu'il puisse entièrement le gérer soit-même, c'est pourquoi j'ai inclus un espace d'administration simple et complet ainsi qu'un page builder pour qu'il puisse modifier seul le contenu de ses pages à la manière du logiciel word.",
+      "link": "http://www.thierrymonicault.fr"
+    },
+    {
+      "id": "project_blog",
+      "client": "Formation OpenClass Room",
+      "title": "DWJ #4 - Blog",
+      "img": [
+      ],
+      "technologies": [
+        "HTML5/CSS3",
+        "SASS",
+        "Bootstrap",
+        "SASS",
+        "Javascript",
+        "jQuery",
+        "PHP7",
+        "Symfony4",
+        "POO",
+        "MVC"
+      ],
+      "description": "Projet en développement...<br /><br />Ce projet représente le suivie d'un cahier des charges pour la réalisation d'un blog pour un écrivain souhaitant poster son prochain roman chapitre par chapitre sur internet. <br /><br />Le cahier des charges interdit notament l'utilisation de wordpress ou de frameworks tel que Symfony. Il impose également l'utilisation de la POO et de MVC.",
       "link": ""
     },
     {
-      "id": "project_thierrymonicault",
-      "client": "",
-      "title": "",
+      "id": "project_via",
+      "client": "Application personelle",
+      "title": "VIA Linux",
       "img": [
+        "via_linux/01.png"
       ],
       "technologies": [
-        "HTML5/CSS3",
-        "PHP5"
+        "HTML5 / CSS3",
+        "SASS",
+        "Bootstrap",
+        "Javascript",
+        "jQuery / jQuery UI",
+        "AJAX",
+        "PHP7",
+        "Doctrine / MySQL",
+        "Symfony4"
       ],
-      "description": "",
+      "description": "Projet en développement...<br /><br />Ce projet est un projet personnel que j'utiliserai en tant que site web principal. <br /><br />Le principe est l'utilisation pour le client d'un environnement connu: un système d'exploitation, il pourra donc utiliser diverses fonctionnalités: <ul><li>Interface graphique</li><li>Terminal</li><li>Jeux que j'aurai développé</li><li>Vue en 3D de mes réalisations Blender</li><li>Reconnaissance vocale</li><li>....</li></ul>",
       "link": ""
     },
     {
-      "id": "project_thierrymonicault",
-      "client": "",
-      "title": "",
+      "id": "project_webagency",
+      "client": "Formation OpenClass Room",
+      "title": "DWJ #1 - Web Agency",
       "img": [
-        "thierrymonicault.png"
+        "web_agency/01.png",
+        "web_agency/02.png",
+        "web_agency/03.png",
+        "web_agency/04.png",
+        "web_agency/05.png",
+        "web_agency/06.png"
       ],
       "technologies": [
         "HTML5/CSS3",
-        "PHP5"
+        "SASS"
       ],
-      "description": "",
+      "description": "Ce projet représente l'intégration d'une maquette pour le compte d'une agence web. <br /><br />Le site devais être réaliser en HTML5/CSS3 uniquement. Seul pour quelques amélioration annexes et \"indispensable\" tel que le smooth scroll javascript fût autorisé",
       "link": ""
     },
     {
-      "id": "project_thierrymonicault",
-      "client": "",
-      "title": "",
+      "id": "project_wordpress",
+      "client": "Formation OpenClass Room",
+      "title": "DWJ #2 - Wordpress",
       "img": [
-        "thierrymonicault.png"
+        "wordpress/1.png",
+        "wordpress/2.png",
+        "wordpress/3.png",
+        "wordpress/4.png",
+        "wordpress/5.png",
+        "wordpress/6.png",
+        "wordpress/7.png",
+        "wordpress/8.png",
+        "wordpress/9.png",
+        "wordpress/10.png",
+        "wordpress/11.png",
+        "wordpress/12.png",
+        "wordpress/13.png",
+        "wordpress/14.png",
+        "wordpress/15.png",
+        "wordpress/16.png",
+        "wordpress/17.png",
+        "wordpress/18.png",
+        "wordpress/19.png",
+        "wordpress/20.png",
+        "wordpress/21.png",
+        "wordpress/22.png",
+        "wordpress/23.png",
+        "wordpress/24.png",
+        "wordpress/25.png",
+        "wordpress/26.png"
       ],
       "technologies": [
         "HTML5/CSS3",
-        "PHP5"
+        "PHP5",
+        "Wordpress",
+        "Javascript"
       ],
-      "description": "",
+      "description": "Ce projet représente le développement d'un site web de la ville de Vierzon permettant de promouvoir les activités de la ville. Une partie backend ainsi que la possiblité d'effectuer des réservation par les clients étaient recquis.",
       "link": ""
     },
     {
-      "id": "project_thierrymonicault",
-      "client": "",
-      "title": "",
+      "id": "project_google_map",
+      "client": "Formation OpenClass Room",
+      "title": "DWJ #3 - Google Map",
       "img": [
-        "thierrymonicault.png"
+        "google_map/01.png",
+        "google_map/02.png",
+        "google_map/03.png",
+        "google_map/04.png",
+        "google_map/05.png"
       ],
       "technologies": [
         "HTML5/CSS3",
-        "PHP5"
+        "SASS",
+        "Javascript",
+        "jQuery",
+        "AJAX"
       ],
-      "description": "",
-      "link": ""
-    },
-    {
-      "id": "project_thierrymonicault",
-      "client": "",
-      "title": "",
-      "img": [
-        "thierrymonicault.png"
-      ],
-      "technologies": [
-        "HTML5/CSS3",
-        "PHP5"
-      ],
-      "description": "",
+      "description": "Ce projet représente une application permettant la réservation de vélo au sein de la société \"Vélib\".<br /><br /> Lors de ce projet j'ai utilisé et implémenter diverses technologies tel que plugins, modules, promesse, requête asyncrones, ...",
       "link": ""
     }
   ]
