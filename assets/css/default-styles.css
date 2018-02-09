@@ -610,6 +610,18 @@ h1, h2, h3 {
     padding: 0;
     margin: 0;
     background: white; }
+    #navigation .navbar-collapse {
+      background: #f9f9f9;
+      border-bottom: 1px solid #dddddd; }
+    #navigation .navbar-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column; }
+      #navigation .navbar-nav li:last-child {
+        border: none; }
+    #navigation .navbar-brand img {
+      height: 40px; }
     #navigation .nav-link {
       color: black; }
     #navigation .navbar-toggler {
@@ -617,7 +629,7 @@ h1, h2, h3 {
       color: black;
       outline: none; }
       #navigation .navbar-toggler .fa {
-        font-size: 24px; }
+        font-size: 40px; }
 
   #page-header .page-title {
     font-size: 3em; }

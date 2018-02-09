@@ -1132,6 +1132,27 @@ a {
 
     background: $cWhite;
 
+    .navbar-collapse {
+      background: $cBackground_grey;
+      border-bottom:1px solid $cBorder;
+    }
+    .navbar-nav {
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      li:last-child {
+        border:none;
+      }
+    }
+
+    .navbar-brand {
+      img {
+        height: 40px;
+      }
+    }
     .container {
 
     }
@@ -1150,7 +1171,7 @@ a {
 
       .fa {
 
-        font-size: 24px;
+        font-size: 40px;
       }
     }
 
