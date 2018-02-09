@@ -1185,7 +1185,18 @@ a {
   #page-header {
 
     .page-title {
-      font-size: 3em;
+      font-size: 1.9em;
+      letter-spacing: 1px;
+      margin-bottom: 75px;
+    }
+
+    .page-description {
+      font-size: 1em;
+      bottom: 90%;
+
+      &:after {
+        height: 10px;
+      }
     }
 
     .row-controls {
@@ -1225,6 +1236,10 @@ a {
     ////////////////
     #about {
 
+
+      .about__presentation {
+        padding: 0 0 50px 0;
+      }
       .column {
         display: flex;
         align-items: center;
@@ -1379,12 +1394,15 @@ a {
     }
   }
 
-  .modal-dialog {
-    width: 100%;
-    max-width: 100%;
+  .modal {
+    .modal-dialog {
+      width: 100% !important;
+      max-width: 100% !important;
 
-    margin: 0;
-    padding: 0;
+      min-height: 100%;
+      margin: 0;
+      padding: 0;
+    }
   }
 }
 

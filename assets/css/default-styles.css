@@ -634,7 +634,14 @@ h1, h2, h3 {
         font-size: 40px; }
 
   #page-header .page-title {
-    font-size: 3em; }
+    font-size: 1.9em;
+    letter-spacing: 1px;
+    margin-bottom: 75px; }
+  #page-header .page-description {
+    font-size: 1em;
+    bottom: 90%; }
+    #page-header .page-description:after {
+      height: 10px; }
   #page-header .row-controls {
     width: 100%;
     position: absolute;
@@ -653,6 +660,8 @@ h1, h2, h3 {
         width: 100%;
         margin: 5px 10px; }
 
+  #page-content #about .about__presentation {
+    padding: 0 0 50px 0; }
   #page-content #about .column {
     display: flex;
     align-items: center;
@@ -729,9 +738,10 @@ h1, h2, h3 {
   #page-content #contact #page-footer .social-networks {
     margin-bottom: 25px; }
 
-  .modal-dialog {
-    width: 100%;
-    max-width: 100%;
+  .modal .modal-dialog {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 100%;
     margin: 0;
     padding: 0; } }
 
