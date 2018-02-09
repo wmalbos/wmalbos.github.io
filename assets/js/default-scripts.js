@@ -1,10 +1,14 @@
 // VARIABLES
 
-const CONFIG_DIRECTORY = "./config/";
-const PORTFOLIO_DIRECTORY = "./assets/img/";
+const DIRECTORY = {
+    "CONFIG" : "./config/",
+    "PORTFOLIO" : "./assets/img/"
+};
+
 const EMPTY_IMAGE = "soon.png";
 
 var configuration = {};
+
 
 // CONFIGURATION FILE READER
 ///////////////////////////////////
@@ -14,7 +18,7 @@ function reader_file(_filename) {
 
     $.ajax({
         type: 'GET',
-        url: CONFIG_DIRECTORY + _filename + '.json',
+        url: DIRECTORY.CONFIG + _filename + '.json',
         async: true,
         dataType: 'json',
         beforeSend: function () {
@@ -161,25 +165,27 @@ function initializePortfolio() {
     for (var i = 0; i < portfolio_items.length; i++) {
 
         str +=
-            '<div class="col-md-4 project-item">' +
+            '<div class="col-lg-4 col-md-6 column"> ' +
+            '   <div class="project-item">' +
 
-            '   <figure>';
+            '       <figure>';
 
         if (portfolio_items[i].img.length < 1) {
-            str += '<img src="' + PORTFOLIO_DIRECTORY + EMPTY_IMAGE + '" alt="Article en cours de développement">';
+            str += '<img src="' + DIRECTORY.PORTFOLIO + EMPTY_IMAGE + '" alt="Article en cours de développement">';
         } else {
-            str += '<img src="' + PORTFOLIO_DIRECTORY + portfolio_items[i].img[0] + '" alt="Screenshot du projet ' + portfolio_items[i].title + '">';
+            str += '<img src="' + DIRECTORY.PORTFOLIO + portfolio_items[i].img[0] + '" alt="Screenshot du projet ' + portfolio_items[i].title + '">';
         }
 
         str +=
-            '   </figure>' +
+            '       </figure>' +
 
-            '   <div class="modal-hover">' +
-            '       <button class="modal-link" data-toggle="modal" data-target="#' + portfolio_items[i].id + '">' +
-            '           <i class="fa fa-search"></i>' +
-            '       </button>' +
+            '       <div class="modal-hover">' +
+            '           <button class="modal-link" data-toggle="modal" data-target="#' + portfolio_items[i].id + '">' +
+            '               <i class="fa fa-search"></i>' +
+            '           </button>' +
 
-            '       <p class="modal-description">' + portfolio_items[i].title + '</p>' +
+            '           <p class="modal-description">' + portfolio_items[i].title + '</p>' +
+            '       </div>' +
             '   </div>' +
 
             '</div>';
@@ -235,14 +241,14 @@ function initializePortfolioModals() {
 
 
             str += 'item carousel-item" data-slide-number="' + j + '"> ' +
-                '   <img src="' + PORTFOLIO_DIRECTORY + portfolio_items[i].img[j] + '" class="img-fluid"> ' +
+                '   <img src="' + DIRECTORY.PORTFOLIO + portfolio_items[i].img[j] + '" class="img-fluid"> ' +
                 '</div> ';
         }
 
         if (portfolio_items[i].img.length <= 1){
             str +=
                 '<div class="item carousel-item active" data-slide-number="1"> ' +
-                '   <img src="' + PORTFOLIO_DIRECTORY + EMPTY_IMAGE + '" class="img-fluid"> ' +
+                '   <img src="' + DIRECTORY.PORTFOLIO + EMPTY_IMAGE + '" class="img-fluid"> ' +
                 '</div> ';
         }
 
@@ -266,7 +272,7 @@ function initializePortfolioModals() {
             str +=
                 '"> ' +
                 '   <a id="carousel-selector-' + i + j + '" class="selected" data-slide-to="' + j + '" data-target="#carousel_' + i + '"> ' +
-                '       <img src="' + PORTFOLIO_DIRECTORY + portfolio_items[i].img[j] + '" > ' +
+                '       <img src="' + DIRECTORY.PORTFOLIO + portfolio_items[i].img[j] + '" > ' +
                 '   </a> ' +
                 '</li> ';
         }

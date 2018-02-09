@@ -143,12 +143,10 @@ h1, h2, h3 {
     margin-left: 25px; }
     #navigation .navbar-nav li a {
       color: black; }
+      #navigation .navbar-nav li a.active {
+        color: #ef2d56; }
   #navigation .navbar-nav li:last-child {
     border: 1px solid #ef2d56; }
-  #navigation.active {
-    background: white; }
-    #navigation.active a {
-      color: black; }
 
 #page-header {
   width: 100%;
@@ -374,17 +372,21 @@ h1, h2, h3 {
     margin: 100px 0;
     background: url("../img/bg.jpg") center; }
     #page-content #question .btn {
-      display: inline-block;
-      width: 100%; }
+      display: inline-block; }
     #page-content #question .text-center {
       padding: 0; }
   #page-content #projects {
     padding: 0 0 100px 0; }
+    #page-content #projects .column {
+      padding: 10px; }
     #page-content #projects .project-item {
       height: 150px;
       position: relative;
       margin: 0;
-      padding: 0; }
+      padding: 5px;
+      -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75); }
       #page-content #projects .project-item:hover .modal-hover {
         opacity: 1; }
       #page-content #projects .project-item .modal-hover {
@@ -403,7 +405,9 @@ h1, h2, h3 {
         color: white;
         opacity: 0;
         transition: .3s; }
-        #page-content #projects .project-item .modal-hover .fa {
+        #page-content #projects .project-item .modal-hover .modal-link:hover {
+          cursor: pointer; }
+        #page-content #projects .project-item .modal-hover .modal-link .fa {
           width: 60px;
           height: 60px;
           border-radius: 50%;
@@ -414,11 +418,15 @@ h1, h2, h3 {
           align-items: center;
           justify-content: center;
           font-size: 24px;
-          cursor: pointer; }
-          #page-content #projects .project-item .modal-hover .fa:hover {
+          margin-bottom: 20px; }
+          #page-content #projects .project-item .modal-hover .modal-link .fa:hover {
             color: #ef2d56; }
         #page-content #projects .project-item .modal-hover .modal-description {
-          position: relative; }
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          text-align: center; }
           #page-content #projects .project-item .modal-hover .modal-description:after {
             content: "";
             position: absolute;
@@ -571,7 +579,13 @@ h1, h2, h3 {
   overflow-y: hidden;
   margin: 10px 0 0 0; }
 .modal .carousel-inner {
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
   height: 600px; }
+  .modal .carousel-inner .carousel-item {
+    height: 100%;
+    background: black; }
   .modal .carousel-inner img {
     max-height: 600px;
     margin: auto;
