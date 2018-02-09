@@ -10,7 +10,7 @@ I) Cahier des charges
 
 L'objectif de ce projet est de réaliser un site web "**one page**" résponsive pour publier sur internet le **CV** et le **Portfolio** d'une personne. 
 
-L'application doit être simple à mettre à jours par le client, car on part du principe qu'il n'est pas famillier avec le monde du développement.
+L'application doit être simple à mettre à jours par le client, car on part du principe qu'il n'est pas familier avec le monde du développement.
 
 Le client a besoin de son application rapidement.
  
@@ -18,7 +18,7 @@ Le client a besoin de son application rapidement.
 II) Architecture de l'application
 -------
 
-*Le projet est hébergé par [Github](https://github.com/), de ce faite il n'y a pas accès aux languages serveur et aux base de donnée.* 
+*Le projet est hébergé par [Github](https://github.com/), de ce faite il n'y a pas accès aux languages serveur et aux bases de données.* 
 
 Pour simuler une interface backend, on demandera au client de modifier un **unique fichier** nommé *conf.json*.
 
@@ -42,7 +42,7 @@ L'application ira récuperer les données ainsi stocké (*simulation de base de 
 III) Technologies utilisées
 -------
 
-Les technologies suivantes on été utilisée pour le développement de cet application:
+Les technologies suivantes ont été utilisées pour le développement de cette application:
 
 * HTML5/CSS3
 * Bootstrap/SASS
@@ -62,7 +62,7 @@ Ci-dessous quelques pistes d'améliorations possibles:
 Remerciements
 -------
 
-Merci d'avoir pris le temps de lire cet article, n'hesitez pas si vous avez des questions à me contacter via [Facebook](https://www.facebook.com/wmalbos) / [Twitter](https://twitter.com/wmalbos), mon adresse email, etc...
+Merci d'avoir pris le temps de lire cet article, n'hésitez pas si vous avez des questions à me contacter via [Facebook](https://www.facebook.com/wmalbos) / [Twitter](https://twitter.com/wmalbos), mon adresse email, etc...
 
 
 Licence
