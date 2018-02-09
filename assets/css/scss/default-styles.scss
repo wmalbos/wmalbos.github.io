@@ -826,54 +826,7 @@ a {
 
     }
 
-    .modal-table {
-      margin: 100px 0;
 
-      position: relative;
-
-      color: $cGrey;
-
-      &:before {
-        content: "";
-
-        position: absolute;
-        top: -50px;
-        left: calc(50% - 100px);
-
-        width: 200px;
-        height: 1px;
-
-        background: $cRed;
-
-      }
-
-      tr:nth-child(1),
-      tr:nth-child(2) {
-        border-bottom: 1px dashed $cGrey;
-      }
-      th {
-        font-weight: bold;
-        letter-spacing: 2px;
-
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        flex-direction: column;
-
-      }
-      td {
-        padding: 0 25px 25px 25px;
-        max-width: 900px;
-        ul {
-          margin: 0;
-          padding: 0;
-
-          li {
-            list-style: none;
-          }
-        }
-      }
-    }
 
   }
 
@@ -1030,6 +983,56 @@ a {
       max-width: 100%;
     }
   }
+
+  .modal-table {
+    margin: 100px 0;
+
+    position: relative;
+
+    color: $cGrey;
+
+    &:before {
+      content: "";
+
+      position: absolute;
+      top: -50px;
+      left: calc(50% - 100px);
+
+      width: 200px;
+      height: 1px;
+
+      background: $cRed;
+
+    }
+
+    tr:nth-child(1),
+    tr:nth-child(2) {
+      border-bottom: 1px dashed $cGrey;
+    }
+    th {
+      font-weight: bold;
+      letter-spacing: 2px;
+
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-direction: column;
+
+    }
+    td {
+      padding: 0 25px 25px 25px;
+      max-width: 900px;
+      ul {
+        margin: 0;
+        padding: 0;
+
+        li {
+          list-style: none;
+        }
+      }
+    }
+  }
+
   .modal-dialog {
     width: 90% !important;
     max-width: 90% !important;
@@ -1045,6 +1048,7 @@ a {
 
   .carousel-inner {
 
+    height: 600px;
     .carousel-item {
 
     }
@@ -1060,6 +1064,8 @@ a {
     left: initial;
     width: initial;
     margin-left: initial;
+
+
   }
 
   .carousel-indicators > li {
@@ -1067,6 +1073,11 @@ a {
     height: initial;
     text-indent: initial;
     cursor: pointer;
+
+    border:1px solid $cBlack;
+    padding: 5px;
+
+    background: $cBackground_grey;
 
     img {
       height: 75px;
@@ -1285,7 +1296,7 @@ a {
           display: flex;
           align-items: center;
           justify-content: center;
-          flex-direction: column;
+          flex-wrap: wrap;
         }
       }
 
@@ -1307,7 +1318,10 @@ a {
       }
       .cursus-item {
 
-        margin-bottom: 25px;
+        margin-bottom: 15px;
+
+        padding-bottom: 15px;
+        border-bottom: 1px solid $cBorder;
         .row {
           display: flex;
           align-items: center;
@@ -1332,6 +1346,16 @@ a {
           border: none;
 
           padding: 10px;
+
+          .cursus-title,
+          .cursus-date ,
+          .cursus-status {
+            text-align: center;
+          }
+
+          .cursus-description {
+            text-align: justify;
+          }
 
           &:after {
             display: none;
@@ -1402,6 +1426,9 @@ a {
   }
 
   .modal {
+    .carousel-inner {
+      height: 400px;
+    }
     .modal-dialog {
       width: 100% !important;
       max-width: 100% !important;

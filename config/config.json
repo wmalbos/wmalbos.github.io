@@ -40,7 +40,7 @@
       "id": "cursus-developer_content",
       "content": [
         {
-          "title": "Développeur d'application - PHP/Symfony",
+          "title": "Développeur d'application PHP/Symfony",
           "date": "A venir",
           "status": "Formation diplômante - Bac +3/4",
           "description": "Lors de cette formation j'aurai l'occasion d'approfondir mes connaissances dans la réalisation complète d'application en PHP/Symfony du besoin du client à la livraison. (UML, blog, site eCommerce, API, Wordpress, reprise d'application, ...) "
@@ -71,7 +71,7 @@
           "description": "Développement de modules pour piloter des périphériques biométriques (scanner d'empreintes digitales, lecteur de code-barres, etc...), tout en respectant un cahier des charges. Ce projet a été validé par le client et mis en production. <br /><br />Dans la deuxième partie du stage j'ai effectué une restructuration d'un logiciel déjà présent."
         },
         {
-          "title": "Licence - Ingénierie de l'informatique",
+          "title": "Licence Ingénierie de l'informatique",
           "date": "Promotion 2015",
           "status": "Formation diplômante - Bac +3",
           "description": "Etudes réalisées à l'Université d'Orléans avec l'obtention d'une mention bien."
@@ -82,22 +82,22 @@
       "id": "cursus-others_content",
       "content": [
         {
-          "title": "Gilles leroux industrie",
-          "date": "Date du cursus",
+          "title": "Miroiterie Marut",
+          "date": "",
           "status": "CDD",
-          "description": "ma description"
+          "description": "Travail en atelier et sur chantiers. Fabrication, pose et dépose de fenêtres."
         },
         {
-          "title": "Gilles leroux industrie",
-          "date": "Date du cursus",
-          "status": "CDD",
-          "description": ""
+          "title": "Modelage Centre",
+          "date": "",
+          "status": "CDI",
+          "description": "Conception en 3D de moules (CAO) à l'aide de SolidWorks. Conception de parcours (FAO) à l'aide de PowerMill. Fabrication sur machine."
         },
         {
-          "title": "Gilles leroux industrie",
-          "date": "Date du cursus",
-          "status": "CDD",
-          "description": "ma description"
+          "title": "ADECCO",
+          "date": "",
+          "status": "Intérim",
+          "description": "Manutention, travail en usine et port de charges lourdes."
         }
       ]
     }

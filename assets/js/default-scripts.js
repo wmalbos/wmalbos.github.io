@@ -218,7 +218,7 @@ function initializePortfolioModals() {
             '           <div class="modal-body"> ' +
 
             '               <div class="row"> ' +
-            '                   <div class="col-md-8 offset-md-2" id="slider_' + i + '"> ' +
+            '                   <div class="col-md-10 offset-md-1" id="slider_' + i + '"> ' +
             '                       <div id="carousel_' + i + '" class="carousel slide"> ' +
 
             // PORTFOLIO PAGE VIEW
