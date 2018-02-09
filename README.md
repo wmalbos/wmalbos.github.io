@@ -1,5 +1,3 @@
-<div style="text-align:center"> <img src="https://github.com/wmalbos/wmalbos.github.io/blob/master/assets/img/project/01.png?raw=true" alt="Project logo" /> </div>
-
 
 Site "One page" configurable  
 ========================================

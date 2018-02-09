@@ -1,4 +1,6 @@
+
 // VARIABLES
+////////////////////////////////
 
 const DIRECTORY = {
     "CONFIG" : "./config/",
@@ -7,12 +9,95 @@ const DIRECTORY = {
 
 const EMPTY_IMAGE = "soon.png";
 
+var smooth_speed = 750;
 var configuration = {};
 
 
-// CONFIGURATION FILE READER
-///////////////////////////////////
 
+$(document).ready(function () {
+
+    // MAIN
+    ////////////////
+
+    // Reading configuration file
+    reader_file("config");
+
+    // LISTENERS
+    ////////////////
+
+    /**
+     * Smooth scrolling
+     */
+    $('.nav-link').on('click', function () {
+
+        var page = $(this).attr('href');
+        var speed = smooth_speed;
+
+        $('html, body').animate({scrollTop: $(page).offset().top}, speed);
+    });
+
+
+});
+
+
+
+
+
+// LISTENERS
+////////////////////////////////
+
+
+/**
+ * Reader config file fire success
+ */
+$("body").on('config_loaded', function () {
+
+    // Initialize about tabs
+    initializeAbout();
+
+    // Initialze competences charts
+    initializeCharts();
+
+    // Initialize cursus items
+    initializeCursus();
+
+    // Initialize portfolio items
+    initializePortfolio();
+
+    // Initialize portfolio items modals
+    initializePortfolioModals();
+
+    // Google Map
+    initializeGoogleMap();
+
+    // Tabs
+    $("#tabs").tabs();
+
+
+    // Fire page loader
+    $("body").trigger('page_loaded');
+
+});
+
+
+/**
+ *
+ */
+$("body").on('page_loaded', function () {
+
+    // Remove loaded because the page is loaded
+    setTimeout(function () {
+        $('#loader').addClass('loader_fade');
+    }, 1000);
+
+});
+
+// FUNCTIONS
+////////////////////////////////
+
+/**
+ * Reader of configuration file
+ */
 function reader_file(_filename) {
 
 
@@ -41,32 +126,8 @@ function reader_file(_filename) {
 }
 
 
-// MAIN
-////////////
-
-// Reading configuration file
-reader_file("config");
-
-
-$("body").on('config_loaded', function () {
-
-    // Initialize about tabs
-    initializeAbout();
-
-    // Initialize cursus items
-    initializeCursus();
-
-    // Initialize portfolio items
-    initializePortfolio();
-
-    // Initialize portfolio items modals
-    initializePortfolioModals();
-
-});
-
-
 /**
- *
+ * Initialize the about tabs
  */
 function initializeAbout() {
 
@@ -101,6 +162,7 @@ function initializeAbout() {
     }
 
 
+    // Append to the DOM
     $('#nav-tab').append(str_link);
     $('#nav-tabContent').append(str_content);
 
@@ -110,7 +172,7 @@ function initializeAbout() {
 }
 
 /**
- *
+ * Initialize the cursus timeline
  */
 function initializeCursus() {
 
@@ -145,6 +207,7 @@ function initializeCursus() {
                 '</div>';
         }
 
+        // Append to the DOM
         $('#' + cursus_items[i].id).append(str);
     }
 
@@ -191,6 +254,7 @@ function initializePortfolio() {
             '</div>';
     }
 
+    // Append to the DOM
     $('#portfolio_items').append(str);
 }
 
@@ -346,70 +410,10 @@ function initializePortfolioModals() {
 }
 
 
-$(document).ready(function () {
-
-    // Loader
-    setTimeout(function () {
-        $('#loader').addClass('loader_fade');
-    }, 1000);
-
-
-    // Google Map
-    googleMapInitialization();
-
-    // Tabs
-    $("#tabs").tabs();
-
-    // Create charts
-    var charts = [
-
-        new Chart($('#integrateur'), {
-            type: 'doughnut',
-            data: deliveredData[0],
-            options: deliveredOpt[0]
-        }),
-
-        new Chart($('#wordpress'), {
-            type: 'doughnut',
-            data: deliveredData[1],
-            options: deliveredOpt[1]
-        }),
-
-        new Chart($('#backoffice'), {
-            type: 'doughnut',
-            data: deliveredData[2],
-            options: deliveredOpt[2]
-        }),
-
-        new Chart($('#learning'), {
-            type: 'doughnut',
-            data: deliveredData[3],
-            options: deliveredOpt[3]
-        })
-
-    ];
-
-
-    $('.modal-link').on('click', function (e) {
-        e.preventDefault();
-    });
-
-    // Smooth scroll
-    $('.nav-link').on('click', function () { // Au clic sur un élément
-        var page = $(this).attr('href'); // Page cible
-        var speed = 750; // Durée de l'animation (en ms)
-        $('html, body').animate({scrollTop: $(page).offset().top}, speed); // Go
-        return false;
-    });
-
-
-});
-
-
-// GOOGLE MAP
-////////////////////////
-
-function googleMapInitialization() {
+/**
+ * Initialize the google map
+ */
+function initializeGoogleMap() {
 
     var myLatLng =
         {lat: 47.216671, lng: 2.08333};
@@ -427,176 +431,23 @@ function googleMapInitialization() {
     });
 }
 
+/**
+ * Initialize competences charts
+ */
+function initializeCharts() {
 
-// NAVIGATION SCROLL
-////////////////////////
+    var charts = configuration.charts;
+    for(var i = 0; i < charts.length; i++) {
 
-
-$(window).scroll(function () {
-
-    var iCurScrollPos = $(this).scrollTop();
-
-    if (!$('#navigation').hasClass('active') && iCurScrollPos > 200) {
-        $('#navigation').addClass('active');
+        new Chart($('#' + charts[i].id), {
+            type: charts[i].type,
+            data: charts[i].data,
+            options: charts[i].options
+        })
     }
+}
 
 
-    if ($('#navigation').hasClass('active') && iCurScrollPos < 200) {
-        $('#navigation').removeClass('active');
-    }
 
-});
-
-
-// DOUGHNUT CHARTS
-////////////////////////
-
-// Charts options
-var deliveredOpt =
-    [
-        {
-            cutoutPercentage: 88,
-            animation: {
-                animationRotate: true,
-                duration: 2000
-            },
-            legend: {
-                display: false
-            },
-            tooltips: {
-                enabled: false
-            }
-        },
-
-        {
-            cutoutPercentage: 88,
-            animation: {
-                animationRotate: true,
-                duration: 2000
-            },
-            legend: {
-                display: false
-            },
-            tooltips: {
-                enabled: false
-            }
-        },
-
-        {
-            cutoutPercentage: 88,
-            animation: {
-                animationRotate: true,
-                duration: 2000
-            },
-            legend: {
-                display: false
-            },
-            tooltips: {
-                enabled: false
-            }
-        },
-
-        {
-            cutoutPercentage: 88,
-            animation: {
-                animationRotate: true,
-                duration: 2000
-            },
-            legend: {
-                display: false
-            },
-            tooltips: {
-                enabled: false
-            }
-        }
-    ];
-
-// Charts datas
-var deliveredData =
-    [
-        {
-            labels: [
-                "Value"
-            ],
-            datasets: [
-                {
-                    data: [85, 15],
-                    backgroundColor: [
-                        "#3ec556",
-                        "rgb(249, 249, 249)"
-                    ],
-                    hoverBackgroundColor: [
-                        "#3ec556",
-                        "rgb(249, 249, 249)"
-                    ],
-                    borderWidth: [
-                        0, 0
-                    ]
-                }]
-        },
-
-        {
-            labels: [
-                "Value"
-            ],
-            datasets: [
-                {
-                    data: [65, 35],
-                    backgroundColor: [
-                        "#3ec556",
-                        "rgb(249, 249, 249)"
-                    ],
-                    hoverBackgroundColor: [
-                        "#3ec556",
-                        "rgb(249, 249, 249)"
-                    ],
-                    borderWidth: [
-                        0, 0
-                    ]
-                }]
-        },
-
-        {
-            labels: [
-                "Value"
-            ],
-            datasets: [
-                {
-                    data: [70, 30],
-                    backgroundColor: [
-                        "#3ec556",
-                        "rgb(249, 249, 249)"
-                    ],
-                    hoverBackgroundColor: [
-                        "#3ec556",
-                        "rgb(249, 249, 249)"
-                    ],
-                    borderWidth: [
-                        0, 0
-                    ]
-                }]
-        },
-
-        {
-            labels: [
-                "Value"
-            ],
-            datasets: [
-                {
-                    data: [95, 5],
-                    backgroundColor: [
-                        "#3ec556",
-                        "rgb(249, 249, 249)"
-                    ],
-                    hoverBackgroundColor: [
-                        "#3ec556",
-                        "rgb(249, 249, 249)"
-                    ],
-                    borderWidth: [
-                        0, 0
-                    ]
-                }]
-        }
-    ];
 
 

@@ -1,32 +1,29 @@
 {
-
-  "about" : [
+  "about": [
     {
-      "id" : "passion",
-      "title" : "Passioné",
-      "introduction" : "Tombé dans la marmite de technologies étant petit.",
-      "paragraphs" : [
+      "id": "passion",
+      "title": "Passioné",
+      "introduction": "Tombé dans la marmite de technologies étant petit.",
+      "paragraphs": [
         "<i class=\"fa fa-quote-left\"></i>  La passion du développement m'est venue à l'âge de 12ans. j'ai alors commencé à \"bidouiller\" divers forums en HTML/CSS pour permettre à des groupes de joueurs de communiquer, prévoir des soirée jeux sur internet, etc..",
         "Depuis, cette passion ne m’a jamais quittée et c'est tout naturellement que j'ai poursuivi des études universitaires en ingénierie de l'informatique à l'Université d'Orléans puis des parcours diplômants avec l'école OpenClass Room.",
         "Sur mon temps libre je continue à découvrir, apprendre, bidouiller, les nouvelles technologies en réalisant diverses applications comme des sites internet, jeux, 3D, etc.."
       ]
     },
-
     {
-      "id" : "goals",
-      "title" : "Objectifs",
-      "introduction" : "Le goût du défi",
-      "paragraphs" : [
+      "id": "goals",
+      "title": "Objectifs",
+      "introduction": "Le goût du défi",
+      "paragraphs": [
         "<i class=\"fa fa-quote-left\"></i>  Je travail toujours dans l'objectif de réaliser un code de la meilleure qualité possible pour répondre au besoin du projet. Il est très stimulant de ce remettre en question pour pouvoir s'adapter et apprendre de la constante évolution des technologies.",
         "Ainsi, relever de nouveaux défis est un quotidien pour mener à bien les projets rapidement avec un code de qualité."
       ]
     },
-
     {
-      "id" : "game",
-      "title" : "Un jeu ?",
-      "introduction" : "Un projet informatique, c'est un jeu !",
-      "paragraphs" : [
+      "id": "game",
+      "title": "Un jeu ?",
+      "introduction": "Un projet informatique, c'est un jeu !",
+      "paragraphs": [
         "<i class=\"fa fa-quote-left\"></i>  On débute la partie avec un total de 100pts, l'objectif étant de la terminer avec un score positif.",
         "A chaque développement réalisé on perd des points en fonction de la qualité du développement. Par exemple, plus le code contient d'erreurs, plus on perd de points. Moins on a de points, plus il est difficile de réaliser du code de qualité à cause des erreurs précédentes. Il est alors primordial de toujours penser à développer correctement pour faciliter les développements futurs et améliorer leurs temps de production.",
         "Bien sûr en théorie, lorsque l'on dépasse le délai de livraison c'est la fin du jeu et lorsque que l'on reprend un projet ultérieurement pour modifications on reprend également le nombre de points de ce dernier. ",
@@ -34,7 +31,6 @@
       ]
     }
   ],
-
   "cursus": [
     {
       "id": "cursus-developer_content",
@@ -45,7 +41,6 @@
           "status": "Formation diplômante - Bac +3/4",
           "description": "Lors de cette formation j'aurai l'occasion d'approfondir mes connaissances dans la réalisation complète d'application en PHP/Symfony du besoin du client à la livraison. (UML, blog, site eCommerce, API, Wordpress, reprise d'application, ...) "
         },
-
         {
           "title": "Développeur Web Junior",
           "date": "Depuis Septembre 2017",
@@ -102,7 +97,6 @@
       ]
     }
   ],
-
   "portfolio": [
     {
       "id": "project_thierrymonicault",
@@ -118,7 +112,6 @@
         "tmonicault/07.png",
         "tmonicault/08.png",
         "tmonicault/09.png"
-
       ],
       "technologies": [
         "HTML5/CSS3",
@@ -256,6 +249,160 @@
       ],
       "description": "Ce projet représente une application permettant la réservation de vélo au sein de la société \"Vélib\".<br /><br /> Lors de ce projet j'ai utilisé et implémenter diverses technologies tel que plugins, modules, promesse, requête asyncrones, ...",
       "link": ""
+    }
+  ],
+  "charts": [
+    {
+      "id": "integrateur",
+      "type" : "doughnut",
+      "options": {
+        "cutoutPercentage": 88,
+        "animation": {
+          "animationRotate": true,
+          "duration": 2000
+        },
+        "legend": {
+          "display": false
+        },
+        "tooltips": {
+          "enabled": false
+        }
+      },
+      "data":
+      {
+        "labels": [
+          "Value"
+        ],
+        "datasets": [
+          {
+            "data": [85, 15],
+            "backgroundColor": [
+              "#3ec556",
+              "rgb(249, 249, 249)"
+            ],
+            "hoverBackgroundColor": [
+              "#3ec556",
+              "rgb(249, 249, 249)"
+            ],
+            "borderWidth": [
+              0, 0
+            ]
+          }]
+      }
+    },
+    {
+      "id": "wordpress",
+      "type" : "doughnut",
+      "options": {
+        "cutoutPercentage": 88,
+        "animation": {
+          "animationRotate": true,
+          "duration": 2000
+        },
+        "legend": {
+          "display": false
+        },
+        "tooltips": {
+          "enabled": false
+        }
+      },
+      "data":
+      {
+        "labels": [
+          "Value"
+        ],
+        "datasets": [
+          {
+            "data": [65, 35],
+            "backgroundColor": [
+              "#3ec556",
+              "rgb(249, 249, 249)"
+            ],
+            "hoverBackgroundColor": [
+              "#3ec556",
+              "rgb(249, 249, 249)"
+            ],
+            "borderWidth": [
+              0, 0
+            ]
+          }]
+      }
+    },
+    {
+      "id": "backoffice",
+      "type" : "doughnut",
+      "options": {
+        "cutoutPercentage": 88,
+        "animation": {
+          "animationRotate": true,
+          "duration": 2000
+        },
+        "legend": {
+          "display": false
+        },
+        "tooltips": {
+          "enabled": false
+        }
+      },
+      "data":
+      {
+        "labels": [
+          "Value"
+        ],
+        "datasets": [
+          {
+            "data": [70, 30],
+            "backgroundColor": [
+              "#3ec556",
+              "rgb(249, 249, 249)"
+            ],
+            "hoverBackgroundColor": [
+              "#3ec556",
+              "rgb(249, 249, 249)"
+            ],
+            "borderWidth": [
+              0, 0
+            ]
+          }]
+      }
+    },
+    {
+      "id": "learning",
+      "type" : "doughnut",
+      "options": {
+        "cutoutPercentage": 88,
+        "animation": {
+          "animationRotate": true,
+          "duration": 2000
+        },
+        "legend": {
+          "display": false
+        },
+        "tooltips": {
+          "enabled": false
+        }
+      },
+      "data":
+      {
+        "labels": [
+          "Value"
+        ],
+        "datasets": [
+          {
+            "data": [95, 5],
+            "backgroundColor": [
+              "#3ec556",
+              "rgb(249, 249, 249)"
+            ],
+            "hoverBackgroundColor": [
+              "#3ec556",
+              "rgb(249, 249, 249)"
+            ],
+            "borderWidth": [
+              0, 0
+            ]
+          }]
+      }
     }
   ]
 }
