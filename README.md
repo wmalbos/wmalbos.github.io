@@ -56,7 +56,7 @@ Ci-dessous quelques pistes d'améliorations possibles:
     
 * Créer une page backend accessible via .htaccess (*identifiant et mot de passe*) qui permettra d'écrire automatiquement le fichier de configuration pour rendre transparent le système à l'aide de simples formulaires.
 * Développer/utiliser un plugin pour miniaturiser les images et réduire le temps de chargement de la page
-* Charger les images de manière asynchrones pour accélerer le temps de chargement de la page et faire patienter le visiteur à l'aide d'icônes.
+
 
 
 Remerciements

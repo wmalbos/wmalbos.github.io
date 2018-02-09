@@ -5,8 +5,8 @@
       "title": "Passioné",
       "introduction": "Tombé dans la marmite de technologies étant petit.",
       "paragraphs": [
-        "<i class=\"fa fa-quote-left\"></i>  La passion du développement m'est venue à l'âge de 12ans. j'ai alors commencé à \"bidouiller\" divers forums en HTML/CSS pour permettre à des groupes de joueurs de communiquer, prévoir des soirée jeux sur internet, etc..",
-        "Depuis, cette passion ne m’a jamais quittée et c'est tout naturellement que j'ai poursuivi des études universitaires en ingénierie de l'informatique à l'Université d'Orléans puis des parcours diplômants avec l'école OpenClass Room.",
+        "<i class=\"fa fa-quote-left\"></i>  La passion du développement m'est venue à l'âge de 12ans. j'ai alors commencé à \"bidouiller\" divers forums en HTML/CSS pour permettre à des groupes de joueurs de communiquer, prévoir des soirées jeux sur internet, etc..",
+        "Depuis, cette passion ne m’a jamais quittée et c'est tout naturellement que j'ai poursuivi des études universitaires en ingénierie de l'informatique à l'Université d'Orléans puis des parcours diplômant avec l'école OpenClass Room.",
         "Sur mon temps libre je continue à découvrir, apprendre, bidouiller, les nouvelles technologies en réalisant diverses applications comme des sites internet, jeux, 3D, etc.."
       ]
     },
@@ -15,7 +15,7 @@
       "title": "Objectifs",
       "introduction": "Le goût du défi",
       "paragraphs": [
-        "<i class=\"fa fa-quote-left\"></i>  Je travail toujours dans l'objectif de réaliser un code de la meilleure qualité possible pour répondre au besoin du projet. Il est très stimulant de ce remettre en question pour pouvoir s'adapter et apprendre de la constante évolution des technologies.",
+        "<i class=\"fa fa-quote-left\"></i>  Je travail toujours dans l'objectif de réaliser un code de la meilleure qualité possible pour répondre au besoin du projet. Il est très stimulant de se remettre en question pour pouvoir s'adapter et apprendre de la constante évolution des technologies.",
         "Ainsi, relever de nouveaux défis est un quotidien pour mener à bien les projets rapidement avec un code de qualité."
       ]
     },
@@ -45,7 +45,7 @@
           "title": "Développeur Web Junior",
           "date": "Depuis Septembre 2017",
           "status": "Formation diplômante - Bac +2",
-          "description": "Lors de cette formation j'ai eu l'occasion d'approfondir mes connissances dans les technologies du web (HTML5, CSS3, Javascript, jQuery, AJAX, PHP5, Symfony3).<br /><br /> Mon dernier projet à été la réalisation complète d'un site internet pour un client permettant l'écoute, téléchargement, visualisation de musiques ainsi que de vidéos."
+          "description": "Lors de cette formation j'ai eu l'occasion d'approfondir mes connaissances dans les technologies du web (HTML5, CSS3, Javascript, jQuery, AJAX, PHP5, Symfony3).<br /><br /> Mon dernier projet a été la réalisation complète d'un site internet pour un client permettant l'écoute, téléchargement, visualisation de musiques ainsi que de vidéos."
         },
         {
           "title": "Développeur Web Junior",
@@ -124,7 +124,7 @@
         "POO",
         "MVC"
       ],
-      "description": "Projet en fin de développement...<br /><br />Ce site internet est à destination de Mr Monicault. Il as pour objectif de permettre l'écoute/téléchargement/visionnage d'audios/partitions/vidéos. Il est également possible de consulter et d'imprimer le calendrier de ses représentations.<br /><br />Ce site internet ce devais simple et moderne car il touche une population plus âgé comme il concerne l'accordéon. <br /><br />Enfin il se devait être complètement utilisable et personalisable par le client pour qu'il puisse entièrement le gérer soit-même, c'est pourquoi j'ai inclus un espace d'administration simple et complet ainsi qu'un page builder pour qu'il puisse modifier seul le contenu de ses pages à la manière du logiciel word.",
+      "description": "Projet en fin de développement...<br /><br />Ce site internet est à destination de Mr Monicault. Il as pour objectif de permettre l'écoute/téléchargement/visionnage d'audios/partitions/vidéos. Il est également possible de consulter et d'imprimer le calendrier de ses représentations.<br /><br />Ce site internet ce devais simple et moderne car il touche une population plus âgé comme il concerne l'accordéon. <br /><br />Enfin il se devait d'être complètement utilisable et personalisable par le client pour qu'il puisse entièrement le gérer soit-même, c'est pourquoi j'ai inclus un espace d'administration simple et complet ainsi qu'un page builder pour qu'il puisse modifier seul le contenu de ses pages à la manière du logiciel word.",
       "link": "http://www.thierrymonicault.fr"
     },
     {
@@ -145,7 +145,7 @@
         "POO",
         "MVC"
       ],
-      "description": "Projet en développement...<br /><br />Ce projet représente le suivie d'un cahier des charges pour la réalisation d'un blog pour un écrivain souhaitant poster son prochain roman chapitre par chapitre sur internet. <br /><br />Le cahier des charges interdit notament l'utilisation de wordpress ou de frameworks tel que Symfony. Il impose également l'utilisation de la POO et de MVC.",
+      "description": "Projet en développement...<br /><br />Ce projet représente le suivie d'un cahier des charges pour la réalisation d'un blog pour un écrivain souhaitant poster son prochain roman chapitre par chapitre sur internet. <br /><br />Le cahier des charges interdit notamment l'utilisation de wordpress ou de frameworks tel que Symfony. Il impose également l'utilisation de la POO et de MVC.",
       "link": ""
     },
     {
@@ -185,7 +185,7 @@
         "HTML5/CSS3",
         "SASS"
       ],
-      "description": "Ce projet représente l'intégration d'une maquette pour le compte d'une agence web. <br /><br />Le site devais être réaliser en HTML5/CSS3 uniquement. Seul pour quelques amélioration annexes et \"indispensable\" tel que le smooth scroll javascript fût autorisé",
+      "description": "Ce projet représente l'intégration d'une maquette pour le compte d'une agence web. <br /><br />Le site devait être réalisé en HTML5/CSS3 uniquement. Seul pour quelques améliorations annexes et \"indispensable\" tel que le smooth scroll javascript fût autorisé",
       "link": ""
     },
     {
@@ -226,7 +226,7 @@
         "Wordpress",
         "Javascript"
       ],
-      "description": "Ce projet représente le développement d'un site web de la ville de Vierzon permettant de promouvoir les activités de la ville. Une partie backend ainsi que la possiblité d'effectuer des réservation par les clients étaient recquis.",
+      "description": "Ce projet représente le développement d'un site web de la ville de Vierzon permettant de promouvoir les activités de la ville. Une partie backend ainsi que la possibilité d'effectuer des réservations par les clients étaient recquis.",
       "link": ""
     },
     {
@@ -247,7 +247,7 @@
         "jQuery",
         "AJAX"
       ],
-      "description": "Ce projet représente une application permettant la réservation de vélo au sein de la société \"Vélib\".<br /><br /> Lors de ce projet j'ai utilisé et implémenter diverses technologies tel que plugins, modules, promesse, requête asyncrones, ...",
+      "description": "Ce projet représente une application permettant la réservation de vélo au sein de la société \"Vélib\".<br /><br /> Lors de ce projet j'ai utilisé et implémenter diverses technologies telles que plugins, modules, promesse, requête asynchrones, ...",
       "link": ""
     }
   ],
