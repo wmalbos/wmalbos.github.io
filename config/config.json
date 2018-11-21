@@ -36,14 +36,14 @@
       "id": "cursus-developer_content",
       "content": [
         {
-          "title": "Développeur d'application PHP/Symfony",
-          "date": "A venir",
-          "status": "Formation diplômante - Bac +3/4",
-          "description": "Lors de cette formation j'aurai l'occasion d'approfondir mes connaissances dans la réalisation complète d'application en PHP/Symfony du besoin du client à la livraison. (UML, blog, site eCommerce, API, Wordpress, reprise d'application, ...) "
+          "title": "Développeur Symfony",
+          "date": "Depuis mars 2018",
+          "status": "Délit d'influence - Bourges",
+          "description": "Développeur au sein de la société Délit d'influence, j'ai développé sous Symfony 4 une suite d'application, notamment un CMS complet ECommerce, permettant le déploiement rapide d'application web entièrement paramétrables"
         },
         {
           "title": "Développeur Web Junior",
-          "date": "Depuis Septembre 2017",
+          "date": "Mars - Septembre 2017",
           "status": "Formation diplômante - Bac +2",
           "description": "Lors de cette formation j'ai eu l'occasion d'approfondir mes connaissances dans les technologies du web (HTML5, CSS3, Javascript, jQuery, AJAX, PHP5, Symfony3).<br /><br /> Mon dernier projet a été la réalisation complète d'un site internet pour un client permettant l'écoute, téléchargement, visualisation de musiques ainsi que de vidéos."
         },
