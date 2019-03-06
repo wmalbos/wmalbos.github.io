@@ -57,7 +57,7 @@
           "title": "Autodidacte",
           "date": "Depuis Janvier 2017",
           "status": "Formation en autodidacte",
-          "description": "Cours suivis sur diverses plateformes web (par exemple: OpenClassRooms, Alphorm, Grafikart, Udemy, ...) mais aussi à travers certains livres (par exemple: \"Techniques de référencement web: Audit et suivi SEO\" d'Alexandra Martin et Mathieu Chartier)"
+          "description": "Cours suivis sur diverses plateformes web (par exemple: OpenClassRooms, Alphorm, Grafikart, Udemy, ...) mais aussi à travers certains livres (par exemple: \"Techniques de référencement web: Audit et suivi SEO\" d'Alexandra Martin et Mathieu Chartier)<br /><br />Curieux de nature j'explore divers langages, frameworks, ... je m'intéresse également à la 3D avec des bibliothèques tel que THree.js ou des logiciels comme Blender."
         },
         {
           "title": "Gille Leroux Industrie",
@@ -69,7 +69,7 @@
           "title": "Licence Ingénierie de l'informatique",
           "date": "Promotion 2015",
           "status": "Formation diplômante - Bac +3",
-          "description": "Etudes réalisées à l'Université d'Orléans avec l'obtention d'une mention bien."
+          "description": "Etudes réalisées à l'Université d'Orléans avec l'obtention d'une mention bien. Formation orientée logiciel (Java, C#, C, C++, ...)"
         }
       ]
     },
